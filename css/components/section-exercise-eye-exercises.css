@@ -1,0 +1,403 @@
+/*====================================================================*/
+/*------------------ SECTION-EXERCISE-EYE-EXERCISES ------------------*/
+/*====================================================================*/
+
+.section-exercise-eye-exercises,
+.section-exercise-eye-exercises a:hover,
+.section-exercise-eye-exercises a:focus,
+.section-exercise-eye-exercises .section-exercise__color {
+    color: rgb(203, 83, 75);
+}
+
+.section-exercise-eye-exercises::selection,
+.section-exercise-eye-exercises ::selection {
+    color: #e7e7e7;
+    background-color: rgb(203, 83, 75);
+}
+
+.section-exercise-eye-exercises {
+}
+
+    .section-exercise-eye-exercises .section-exercise__content {
+        position: relative;
+
+        overflow-x: hidden;
+    }
+
+        .section-exercise-eye-exercises .section-exercise__content .center {
+            overflow: hidden;
+        }
+
+            .section-exercise-eye-exercises__content-box {
+                position: relative;
+
+                width: 100%;
+                max-width: 750px;
+                margin: 50px;
+
+                background-color: rgba(0, 0, 0, 0.8);
+                backdrop-filter: blur(4px);
+            }
+
+            @media (max-width: 767px) {
+
+                .section-exercise-eye-exercises__content-box {
+                    max-width: none;
+                    margin: 40px;
+                }
+            }
+
+            @media (max-height: 829px) {
+
+                .section-exercise-eye-exercises__content-box {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            @media (max-width: 639px) {
+
+                .section-exercise-eye-exercises__content-box {
+                    margin: 20px;
+                }
+            }
+
+            @media (max-width: 479px) {
+
+                .section-exercise-eye-exercises__content-box {
+                    margin: 0px;
+                }
+            }
+
+            @media (max-height: 599px) {
+
+                .section-exercise-eye-exercises__content-box {
+                    margin: 0;
+                }
+            }
+
+/*--------------------------------------------------------------------*/
+/*---------------------------- EXERCISES -----------------------------*/
+/*--------------------------------------------------------------------*/
+
+.section-exercise-eye-exercises__exercises {
+    position: relative;
+
+    margin: 0;
+
+    overflow: hidden;
+}
+
+    .section-exercise-eye-exercises__exercise {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: auto;
+        padding: 55px 50px 60px 50px;
+        padding-bottom: calc(80px + 60px);
+        margin: 0;
+
+        overflow: hidden;
+    }
+
+    .js .section-exercise-eye-exercises__exercise {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .section-exercise-eye-exercises__exercise--current {
+        z-index: 99;
+    }
+
+    @media (max-width: 767px) {
+
+        .section-exercise-eye-exercises__exercise {
+            padding: 45px 40px 50px 40px;
+            padding-bottom: calc(70px + 50px);
+        }
+    }
+
+    @media (max-width: 639px) {
+
+        .section-exercise-eye-exercises__exercise {
+            padding: 55px 40px 60px 40px;
+            padding-bottom: calc(70px + 60px);
+        }
+    }
+
+    @media (max-width: 479px) {
+
+        .section-exercise-eye-exercises__exercise {
+            padding: 50px 30px 55px 30px;
+            padding-bottom: calc(70px + 55px);
+        }
+    }
+
+    @media (max-width: 399px) {
+
+        .section-exercise-eye-exercises__exercise {
+            padding: 45px 20px 40px 20px;
+            padding-bottom: calc(70px + 40px);
+        }
+    }
+
+    @media (min-width: 0px) {
+
+        .no-js .section-exercise-eye-exercises__exercise:not(:first-child) {
+            padding-top: 0px;
+        }
+
+        .no-js .section-exercise-eye-exercises__exercise:not(:last-child) {
+            padding-bottom: 0px;
+        }
+
+        .no-js .section-exercise-eye-exercises__exercise:last-child {
+            padding-bottom: 50px;
+        }
+    }
+
+    .no-js .section-exercise-eye-exercises__exercise:nth-child(1n + 2) {
+        counter-increment: section-exercise-eye-exercises__exercise;
+    }
+
+        .js .section-exercise-eye-exercises__switch-animation-1-target,
+        .js .section-exercise-eye-exercises__switch-animation-2-target {
+            transform: scale(1.1666);
+
+            opacity: 0;
+        }
+
+        .section-exercise-eye-exercises__exercise-animation-wrapper {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 35px auto;
+        }
+
+        @media (max-height: 879px) {
+
+            .section-exercise-eye-exercises__exercise-animation-wrapper {
+                max-width: 420px;
+            }
+        }
+
+        @media (max-height: 849px) {
+
+            .section-exercise-eye-exercises__exercise-animation-wrapper {
+                max-width: 400px;
+            }
+        }
+
+        @media (max-height: 639px) {
+
+            .section-exercise-eye-exercises__exercise-animation-wrapper {
+                max-width: 360px;
+            }
+        }
+
+        @media (max-height: 839px) {
+
+            .section-exercise-eye-exercises__exercise-animation-wrapper {
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-height: 639px) {
+
+            .section-exercise-eye-exercises__exercise-animation-wrapper {
+                order: 2;
+
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 399px) {
+
+            .section-exercise-eye-exercises__exercise-animation-wrapper {
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+        }
+
+            .section-exercise-eye-exercises__exercise-animation {
+                position: relative;
+
+                width: 100%;
+
+                opacity: 1;
+
+                transition: opacity 1.5s cubic-bezier(0, 0, .35, 1) 0s;
+            }
+
+            .section-exercise-eye-exercises__exercise--current .section-exercise-eye-exercises__exercise-animation:empty {
+                opacity: 0;
+            }
+
+            .section-exercise-eye-exercises__exercise-animation::after {
+                padding-bottom: calc((1120 / 1380) * 100%);
+            }
+
+            .section-exercise-eye-exercises__exercise-animation-loader {
+                content: "";
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                width: 160px;
+                height: 160px;
+                margin: auto;
+
+                border-radius: 50%;
+                box-shadow: inset 0px 0px 0px 100px rgba(203, 83, 75, 0);
+                opacity: 0;
+
+                transition: opacity 0.75s cubic-bezier(.12, .7, 1, 1) 0s;
+                animation: section-exercise-eye-exercises__exercise-animation-loader 1.5s linear 0s infinite;
+                will-change: opacity, box-shadow, transform;
+            }
+
+            @media (max-width: 479px) {
+
+                .section-exercise-eye-exercises__exercise-animation-loader {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+
+            .section-exercise-eye-exercises__exercise-animation:not(.section-exercise-eye-exercises__exercise-animation--data-preloaded):empty ~ .section-exercise-eye-exercises__exercise-animation-loader {
+                opacity: 1;
+            }
+
+            @keyframes section-exercise-eye-exercises__exercise-animation-loader {
+                0% {
+                    transform: scale(0);
+                    box-shadow: inset 0px 0px 0px 100px rgba(203, 83, 75, 0);
+                    animation-timing-function: cubic-bezier(.12, .8, .12, 1);
+                }
+                52% {
+                    box-shadow: inset 0px 0px 0px 2px rgba(203, 83, 75, 1);
+                    animation-timing-function: cubic-bezier(.23, .74, .89, .4);
+                }
+                100% {
+                    transform: scale(1);
+                    box-shadow: inset 0px 0px 0px 20px rgba(203, 83, 75, 0);
+                }
+            }
+
+        .section-exercise-eye-exercises__exercise-text {
+            position: relative;
+
+            padding-bottom: 50px;
+            margin: 0;
+        }
+
+        .no-js .section-exercise-eye-exercises__exercise-text {
+            width: 100%;
+
+            text-align: left;
+        }
+
+        .no-js .section-exercise-eye-exercises__exercise:nth-child(1n + 2) .section-exercise-eye-exercises__exercise-text::before {
+            content: counter(section-exercise-eye-exercises__exercise)". ";
+        }
+
+        @media (max-height: 819px) {
+
+            .section-exercise-eye-exercises__exercise-text {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .section-exercise-eye-exercises__exercise-text {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 479px) {
+
+            .section-exercise-eye-exercises__exercise-text {
+                padding-bottom: 30px;
+            }
+        }
+
+        @media (max-height: 679px) {
+
+            .section-exercise-eye-exercises__exercise-text {
+                padding-top: 10px;
+            }
+        }
+
+/*--------------------------------------------------------------------*/
+/*---------------------------- CONTROLLER ----------------------------*/
+/*--------------------------------------------------------------------*/
+
+.section-exercise-eye-exercises__controller {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 199;
+
+    padding-right: 50px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+}
+
+@media (max-width: 767px) {
+
+    .section-exercise-eye-exercises__controller {
+        padding-right: 40px;
+        padding-bottom: 50px;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 639px) {
+
+    .section-exercise-eye-exercises__controller {
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 479px) {
+
+    .section-exercise-eye-exercises__controller {
+        padding-right: 30px;
+        padding-bottom: 55px;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 399px) {
+
+    .section-exercise-eye-exercises__controller {
+        padding-right: 20px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+    }
+}
+
+@media (min-width: 1260px) {}
+@media (max-width: 1520px) {}
+@media (min-width: 1260px) and (max-width: 1519px) {}
+@media (min-width: 768px) and (max-width: 1259px) {}
+@media (min-width: 1024px) and (max-width: 1259px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (max-width: 767px) {}
+@media (min-width: 640px) and (max-width: 767px) {}
+@media (min-width: 480px) and (max-width: 639px) {}
+@media (max-width: 479px) {}
+
+/* Barvy:
+ * primary: #e7e7e7
+ * highlight: #B2DE40
+ * current: currentColor
+ */

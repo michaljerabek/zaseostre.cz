@@ -1,0 +1,362 @@
+/*====================================================================*/
+/*------------------------------- MAIN -------------------------------*/
+/*====================================================================*/
+
+/* Základní globální styly obsahu webu.
+ * Chcete-li upravit konkrétní element, je vhodné pro něj vytvořit
+ * samostatnou třídu nebo před selektor tagu přidat selektor komponentu,
+ * jehož je element součástí. Přepisování stylů pomocí názvů tagů může
+ * způsobit nepředvídatelné výsledky ve zbytku stránky.
+ */
+
+/* Odstraní posuvníky v Chromu, pokud je stránka upravována
+ * pomocé Live Preview v editoru Brackets. Simulace mobilních
+ * systémů, kde posuvník nezmenšuje obsah. */
+html[data-brackets-id]::-webkit-scrollbar {
+    display: none;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+
+    color: #e7e7e7;
+    background-color: #000;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    quotes: "\201E" "\201C" "\201A" "\2018";
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 240px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4375rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    line-height: 1.739130434783;
+    letter-spacing: 0.015em;
+}
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 1.3125rem;
+    }
+}
+
+@media (max-width: 479px) {
+
+    body {
+        font-size: 1.1875rem;
+    }
+}
+
+@media (max-width: 319px) {
+
+    body {
+        font-size: 1rem;
+    }
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+svg {
+    fill: currentColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h1 {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+
+    font-size: 4.6875rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+h2 {
+    margin-top: 1.27272727em;
+    margin-bottom: 1.27272727em;
+
+    font-size: 3.4375rem;
+    font-weight: 300;
+    line-height: 1.27272727;
+}
+
+h3 {
+    margin-top: 1.66666666em;
+    margin-bottom: 1.66666666em;
+
+    font-size: 1.875rem;
+    line-height: 1.666666666;
+}
+
+h4 {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+
+    font-size: 1.5625rem;
+    line-height: 1.6;
+}
+
+h5 {
+    margin-top: 1.739130434783em;
+    margin-bottom: 1.739130434783em;
+
+    font-size: 1.4375rem;
+    line-height: 1.739130434783;
+}
+
+h6 {
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
+
+    font-size: 1.3125rem;
+    line-height: 1.75;
+}
+
+@media (max-width: 1023px) {
+
+    h1 {
+        margin-top: 1.230769231em;
+        margin-bottom: 1.230769231em;
+
+        font-size: 4.0625rem;
+        line-height: 1.230769231;
+    }
+}
+
+@media (max-width: 767px) {
+
+    h1 {
+        margin-top: 1.27272727em;
+        margin-bottom: 1.27272727em;
+
+        font-size: 3.4375rem;
+        line-height: 1.27272727;
+    }
+
+    h2 {
+        margin-top: 1.4285714em;
+        margin-bottom: 1.4285714em;
+
+        font-size: 2.1875rem;
+        line-height: 1.4285714;
+    }
+
+    h3 {
+        margin-top: 1.6em;
+        margin-bottom: 1.6em;
+
+        font-size: 1.5625rem;
+        line-height: 1.6;
+    }
+
+    h4 {
+        margin-top: 1.739130434783em;
+        margin-bottom: 1.739130434783em;
+
+        font-size: 1.4375rem;
+        line-height: 1.739130434783;
+    }
+
+    h5 {
+        margin-top: 1.75em;
+        margin-bottom: 1.75em;
+
+        font-size: 1.3125rem;
+        line-height: 1.75;
+    }
+
+    h6 {
+        margin-top: 1.666666666em;
+        margin-bottom: 1.666666666em;
+
+        font-size: 1.125rem;
+        line-height: 1.6666666;
+    }
+}
+
+@media (max-width: 639px) {
+
+    h1 {
+        margin-top: 1.3333333em;
+        margin-bottom: 1.3333333em;
+
+        font-size: 2.8125rem;
+        line-height: 1.333333333;
+    }
+}
+
+p {
+    margin-bottom: 1.739130434783em;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+    blockquote p {
+        font-size: inherit;
+    }
+
+    blockquote p:first-of-type:before {
+        content: open-quote;
+    }
+
+    blockquote p:last-of-type:after {
+        content: close-quote;
+    }
+
+ol,
+ul,
+img,
+table,
+figure {
+    margin: 1.739130434783rem auto;
+}
+
+img[alt]:not([class]) {
+    font-size: 1.3125rem;
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+
+    img[alt]:not([class]) {
+        font-size: 1.125rem;
+    }
+}
+
+figure img {
+    margin-bottom: 0.434782609em;
+}
+
+figcaption {
+    font-size: 1.3125rem;
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+
+    figcaption {
+        font-size: 1.125rem;
+    }
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ul:not([class]) {
+    list-style: disc inside;
+}
+
+p,
+li,
+tr,
+caption,
+figcaption,
+img:not([class]),
+.content-line-height {
+    line-height: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    color: #B2DE40;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+cite {
+    font-style: italic;
+}
+
+p,
+li,
+a:not(.btn),
+.text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+caption {
+    margin-bottom: 0.434782609em;
+
+    font-size: 1.875rem;
+    line-height: 1.666666666;
+}
+
+@media (max-width: 767px) {
+
+    caption {
+        font-size: 1.5625rem;
+    }
+}
+
+th,
+td {
+    padding: 0.434782609em;
+}
+
+th {
+    font-weight: bold;
+}

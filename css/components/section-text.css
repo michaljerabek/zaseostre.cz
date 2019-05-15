@@ -1,0 +1,120 @@
+/*====================================================================*/
+/*--------------------------- SECTION-TEXT ---------------------------*/
+/*====================================================================*/
+
+.section-text .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+
+    .section-text__wrapper {
+        width: 100%;
+        max-width: 680px;
+        margin: auto;
+    }
+
+        .section-text__texts {
+            padding-top: 5px;
+            padding-bottom: 50px;
+
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+
+            .section-text__texts {
+                padding-top: 25px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+
+            .section-text__texts {
+                padding-top: 50px;
+            }
+        }
+
+            .js .section-text__text:not(.section-text__text--current) {
+                display: none;
+            }
+
+            .no-js .section-text__text {
+                margin-bottom: 2.5rem;
+            }
+
+                .section-text__text h3 {
+                    margin-top: 0;
+                    margin-bottom: 1.739130434783em;
+                }
+
+                .section-text__text .highlight {
+                    font-size: 1.875rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 0.04em;
+                }
+
+                .section-text__text .highlight:not(:first-child) {
+                    margin-top: 1.66666em;
+                }
+
+                @media (max-width: 767px) {
+
+                    .section-text__text .highlight {
+                        font-size: 1.75rem;
+                    }
+                }
+
+                @media (max-width: 479px) {
+
+                    .section-text__text .highlight {
+                        font-size: 1.4625rem;
+                    }
+                }
+
+                @media (min-width: 0px) {
+
+                    .section-text__text > :last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+        .section-text .controller {
+            margin-bottom: -10px;
+        }
+
+            .js .section-text .btn .underline,
+            .js .section-text__btn .underline {
+                transform: translateY(-1.25em);
+
+                opacity: 0;
+            }
+
+            .section-text .controller__btn--prev .icon::before,
+            .section-text .controller__btn--prev .icon::after {
+                left: 10px;
+            }
+
+            .section-text .controller__btn--next .icon::before,
+            .section-text .controller__btn--next .icon::after {
+                right: 10px;
+            }
+
+
+@media (min-width: 1260px) {}
+@media (min-width: 1520px) {}
+@media (min-width: 1260px) and (max-width: 1519px) {}
+@media (min-width: 768px) and (max-width: 1259px) {}
+@media (min-width: 1024px) and (max-width: 1259px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (max-width: 767px) {}
+@media (min-width: 640px) and (max-width: 767px) {}
+@media (min-width: 480px) and (max-width: 639px) {}
+@media (max-width: 479px) {}
+
+/* Barvy:
+ * primary: currentColor
+ */

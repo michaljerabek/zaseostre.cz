@@ -1,0 +1,435 @@
+/*====================================================================*/
+/*------------------------------ UTILITY -----------------------------*/
+/*====================================================================*/
+
+/* Pomocné CSS:
+ *
+ *  1. center
+ *  2. x-desktop, x-tablet, x-js, visually-hidden, ...
+ *  3. preserve-aspect-ratio (16:9, 4:3, ...)
+ *  4. clear-button
+ *  5. auto-size
+ *  6. nohyphens, nowrap
+ *  7. [data-before]:before, ...
+ *  8. br
+ *  9. hf-opacity
+ * 10. font1, ...
+ * 11. color1, bg1, ...
+ */
+
+
+/* Zarovná osbah do středu stránky. */
+.center {
+    max-width: 1500px;
+    padding: 0 50px;
+    margin: 0px auto;
+}
+
+/* GENERATE: MEDIA | TWIG | settings.yml
+    ====
+    {% for name, range in media %}{% if name == "tablet-s" %}=GX=
+    @media (max-width: {{range[1]}}px) {
+
+        .center {
+            padding: 0 40px;
+        }
+    }
+    {% endif %}=GX={% if name == "mobile" %}=GX=
+
+    @media (max-width: {{range[1]}}px) {
+
+        .center {
+            padding: 0 20px;
+        }
+    }
+    {% endif %}{% endfor %}
+*/
+
+@media (max-width: 1023px) {
+
+    .center {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .center {
+        padding: 0 20px;
+    }
+}
+
+/* /GENERATE: MEDIA */
+
+/* GENERATE: MEDIA | media.twig | settings.yml */
+
+/* Skryje obsah podle velikosti viewportu. */
+@media (min-width: 1260px) {
+
+    html .x-desktop.x-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 1520px) {
+
+    html .x-desktop-l.x-desktop-l {
+        display: none;
+    }
+}
+
+@media (min-width: 1260px) and (max-width: 1519px) {
+
+    html .x-desktop-s.x-desktop-s {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+    html .x-tablet.x-tablet {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1259px) {
+
+    html .x-tablet-l.x-tablet-l {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    html .x-tablet-s.x-tablet-s {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+
+    html .x-mobile.x-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+
+    html .x-mobile-l.x-mobile-l {
+        display: none;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+
+    html .x-mobile-m.x-mobile-m {
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+
+    html .x-mobile-s.x-mobile-s {
+        display: none;
+    }
+}
+
+@media (max-width: 319px) {
+
+    html .x-watch.x-watch {
+        display: none;
+    }
+}
+
+/* /GENERATE: MEDIA */
+
+@media screen {
+
+    html .x-screen.x-screen {
+        display: none;
+    }
+}
+
+/* Skryje obsah, pokud je zapnutý/vypnutý JavaScript. */
+@media all {
+
+    html.no-js .x-no-js,
+    html.js .x-js,
+    .no-js .if-no-js-hidden,
+    .js .if-js-hidden {
+        display: none;
+    }
+
+    /* Vyzuálně skryje obsah, ale zůstane přístupný pro čtečky obrazovek apod. */
+    .no-js .if-no-js-visually-hidden,
+    .js .if-js-visually-hidden,
+    .visually-hidden {
+        position: absolute;
+
+        height: 1px;
+        width: 1px;
+        padding: 0;
+        margin: -1px;
+
+        white-space: nowrap;
+
+        border: 0;
+
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+        clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+
+        overflow: hidden;
+    }
+}
+
+/* Zachovává poměr stran.
+ *
+ * Velikost elementu se nastaví na nulu a pomocí paddingu zadaného
+ * v procentech na pseudoelementu :after se vytvoří výška zachovávající
+ * poměr stran. Vnořený element se nastaví na position: absolute
+ * a roztáhne se přes celý rodičovský element.
+ *
+ * Příklad: Potřebujeme, aby video zachovávalo poměr stran 16:9:
+ *
+ * <div class="video 16:9">
+ *     <video class="video__self">...</video>
+ * </div>
+ *
+ * Pokud přednastavené poměry nejsou vhodné, lze použit třídu
+ * preserve-aspect-ratio a v komponentu pak požit vlastní padding
+ * na :after:
+ *
+ * Příklad: Potřebujeme, aby iframe zachovával poměr stran 2:3:
+ *
+ * <div class="iframe-wrapper preserve-aspect-ratio">
+ *     <iframe></iframe>
+ * </div>
+ *
+ * .iframe-wrapper:after {
+ *     padding-bottom: 150%;
+ * }
+ * */
+
+/* GENERATE: ASPECT-RATIO | aspect-ratio.twig | YAML
+    ====
+    ratios: [preserve-aspect-ratio, 1:1] #například: [preserve-aspect-ratio, 16:9, 3:2]
+*/
+
+[class~="preserve-aspect-ratio"],
+[class~="1:1"] {
+    position: relative;
+}
+
+[class~="preserve-aspect-ratio"]:after,
+[class~="1:1"]:after {
+    content: "";
+
+    display: block;
+}
+
+[class~="1:1"]:after {
+    padding-bottom: 100%;
+}
+
+    [class~="preserve-aspect-ratio"] > *,
+    [class~="1:1"] > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+    }
+
+/* /GENERATE: ASPECT-RATIO */
+
+/* Odstraňuje výchozí stylování elementu button. */
+.clear-button {
+    padding: 0;
+    margin: 0;
+
+    font-size: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: inherit;
+
+    color: inherit;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    touch-action: manipulation;
+}
+
+.clear-button::-moz-focus-inner {
+    padding: 0;
+
+    border: 0;
+}
+
+/* Automatická velikost (obrázku) nepřesahující kontejner. */
+.auto-size {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Roztáhne element přes relativní rodičovský element. */
+.full-size {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Zabrání rozdělování slov. */
+.nohyphens,
+.nohyphens * {
+    word-wrap: normal;
+    overflow-wrap: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* Zobrazí inline obsah před/za elementem podle jeho data-atributu.
+* Vhodné pro oddělení obsahu.
+*
+* Příklad: Chceme oddělit položky seznamu znakem |:
+* <ul>
+*     <li data-after="|">1</li>
+*     <li data-after="|">2</li>
+*     <li>3</li>
+* </ul>
+* */
+[data-before]:before {
+    content: attr(data-before);
+}
+
+[data-after]:after {
+    content: attr(data-after);
+}
+
+/* Zalomí inline obsah (vhodné pro seznamy, kde není možné použít <br>). */
+.br:before {
+    content: "\A";
+
+    display: block;
+
+    white-space: nowrap;
+}
+
+@media (min-width: 1px) {
+
+    html .hf-opacity.hf-opacity:focus,
+    html .hf-opacity.hf-opacity:hover {
+        opacity: 0.85;
+    }
+
+    /* GENERATE: FONTS | fonts.twig | settings.yml
+        ====
+        indexClass: false
+    */
+
+    html .font-primary.font-primary {
+        font-family: "Raleway", sans-serif;
+    }
+
+    /* /GENERATE: FONTS */
+
+    /* GENERATE: COLORS | colors.twig | settings.yml
+        ====
+        props:
+            color: color
+            background-color: bg
+            border-color: bd
+        indexClass: false
+    */
+
+    html .color-primary.color-primary,
+    html .active-color-primary[class*="--active"],
+    html [class*="--active"] .active-color-primary,
+    html .hf-color-primary.hf-color-primary:focus,
+    html .hf-color-primary.hf-color-primary:hover {
+        color: #e7e7e7;
+    }
+
+    html .bg-primary.bg-primary,
+    html .active-bg-primary[class*="--active"],
+    html [class*="--active"] .active-bg-primary,
+    html .hf-bg-primary.hf-bg-primary:focus,
+    html .hf-bg-primary.hf-bg-primary:hover {
+        background-color: #e7e7e7;
+    }
+
+    html .bd-primary.bd-primary,
+    html .active-bd-primary[class*="--active"],
+    html [class*="--active"] .active-bd-primary,
+    html .hf-bd-primary.hf-bd-primary:focus,
+    html .hf-bd-primary.hf-bd-primary:hover {
+        border-color: #e7e7e7;
+    }
+
+    html .color-highlight.color-highlight,
+    html .active-color-highlight[class*="--active"],
+    html [class*="--active"] .active-color-highlight,
+    html .hf-color-highlight.hf-color-highlight:focus,
+    html .hf-color-highlight.hf-color-highlight:hover {
+        color: #B2DE40;
+    }
+
+    html .bg-highlight.bg-highlight,
+    html .active-bg-highlight[class*="--active"],
+    html [class*="--active"] .active-bg-highlight,
+    html .hf-bg-highlight.hf-bg-highlight:focus,
+    html .hf-bg-highlight.hf-bg-highlight:hover {
+        background-color: #B2DE40;
+    }
+
+    html .bd-highlight.bd-highlight,
+    html .active-bd-highlight[class*="--active"],
+    html [class*="--active"] .active-bd-highlight,
+    html .hf-bd-highlight.hf-bd-highlight:focus,
+    html .hf-bd-highlight.hf-bd-highlight:hover {
+        border-color: #B2DE40;
+    }
+
+    html .color-current.color-current,
+    html .active-color-current[class*="--active"],
+    html [class*="--active"] .active-color-current,
+    html .hf-color-current.hf-color-current:focus,
+    html .hf-color-current.hf-color-current:hover {
+        color: currentColor;
+    }
+
+    html .bg-current.bg-current,
+    html .active-bg-current[class*="--active"],
+    html [class*="--active"] .active-bg-current,
+    html .hf-bg-current.hf-bg-current:focus,
+    html .hf-bg-current.hf-bg-current:hover {
+        background-color: currentColor;
+    }
+
+    html .bd-current.bd-current,
+    html .active-bd-current[class*="--active"],
+    html [class*="--active"] .active-bd-current,
+    html .hf-bd-current.hf-bd-current:focus,
+    html .hf-bd-current.hf-bd-current:hover {
+        border-color: currentColor;
+    }
+
+    /* /GENERATE: COLORS */
+}

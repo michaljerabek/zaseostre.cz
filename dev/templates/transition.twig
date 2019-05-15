@@ -1,0 +1,95 @@
+/* Univerzální transition.
+* Lze přidat jakémukoliv elementu.
+* Pokud bude element s třídou .transition uvnitř elementu,
+* který má :hover, :focus nebo :active, bude se chovat stejně,
+* jako kdyby i tento element měl :hover, :focus nebo :active. */
+a,
+button,
+.transition,
+a .transition ,
+button .transition {
+    transition: all {{transition.default.duration}} {{transition.default.easing}} {{transition.default.delay}};
+}
+
+a:hover,
+a:focus,
+button:hover,
+button:focus,
+.transition:hover,
+.transition:focus,
+a:hover .transition,
+a:focus .transition,
+button:hover .transition,
+button:focus .transition,
+.transition:hover .transition,
+.transition:focus .transition{% if useHideable %},
+.transition-hideable:hover .transition,
+.transition-hideable:focus .transition{% endif %} {
+    transition: all {{transition.change.duration}} {{transition.change.easing}} {{transition.change.delay}};
+}
+
+a:focus-within,
+button:focus-within,
+.transition:focus-within,
+a:focus-within .transition,
+button:focus-within .transition,
+.transition:focus-within .transition{% if useHideable %},
+.transition-hideable:focus-within .transition{% endif %} {
+    transition: all {{transition.change.duration}} {{transition.change.easing}} {{transition.change.delay}};
+}
+
+.transition:active,
+a:active,
+a:active .transition,
+button:active,
+button:active .transition,
+.transition:active .transition{% if useHideable %},
+.transition-hideable:active .transition{% endif %} {
+    transition: all {{transition.active.duration}} {{transition.active.easing}} {{transition.active.delay}};
+}{% if useHideable %}
+
+/* Transition animující vzhled stejně jako základní .transition,
+* ale upravený pro animaci výšky elementu, která zůstane
+* konzistentní i při změně stavu na :hover, :focus nebo :active. */
+.transition-hideable,
+a .transition-hideable {
+    transition:{% for prop in transition.props %}
+        {{prop}} {{transition.default.duration}} {{transition.default.easing}} {{transition.default.delay}},{% endfor %}
+        =GX={% for p, prop in _context["transition-hideable"].props %}
+        {{prop}} {{_context["transition-hideable"].default.duration}} {{_context["transition-hideable"].default.easing}} {{_context["transition-hideable"].default.delay}}{% if p == _context["transition-hideable"].props.length - 1 %};{% else %},{% endif %}{% endfor %}
+}
+
+.transition-hideable:hover,
+.transition-hideable:focus,
+.transition-hideable:hover .transition-hideable,
+.transition-hideable:focus .transition-hideable,
+.transition:hover .transition-hideable,
+.transition:focus .transition-hideable,
+a:hover .transition-hideable,
+a:focus .transition-hideable {
+    transition:{% for prop in transition.props %}
+        {{prop}} {{transition.change.duration}} {{transition.change.easing}} {{transition.change.delay}},{% endfor %}
+        =GX={% for p, prop in _context["transition-hideable"].props %}
+        {{prop}} {{_context["transition-hideable"].default.duration}} {{_context["transition-hideable"].default.easing}} {{_context["transition-hideable"].default.delay}}{% if p == _context["transition-hideable"].props.length - 1 %};{% else %},{% endif %}{% endfor %}
+}
+
+.transition-hideable:focus-within,
+.transition-hideable:focus-within .transition-hideable,
+.transition:focus-within .transition-hideable,
+.transition-hideable-trigger:focus-within .transition-hideable,
+a:focus-within .transition-hideable {
+    transition:{% for prop in transition.props %}
+        {{prop}} {{transition.change.duration}} {{transition.change.easing}} {{transition.change.delay}},{% endfor %}
+        =GX={% for p, prop in _context["transition-hideable"].props %}
+        {{prop}} {{_context["transition-hideable"].default.duration}} {{_context["transition-hideable"].default.easing}} {{_context["transition-hideable"].default.delay}}{% if p == _context["transition-hideable"].props.length - 1 %};{% else %},{% endif %}{% endfor %}
+}
+
+.transition-hideable:active,
+.transition-hideable:active .transition-hideable,
+.transition:active .transition-hideable,
+a:active .transition-hideable {
+    transition:{% for prop in transition.props %}
+        {{prop}} {{transition.active.duration}} {{transition.active.easing}} {{transition.active.delay}},{% endfor %}
+        =GX={% for p, prop in _context["transition-hideable"].props %}
+        {{prop}} {{_context["transition-hideable"].default.duration}} {{_context["transition-hideable"].default.easing}} {{_context["transition-hideable"].default.delay}}{% if p == _context["transition-hideable"].props.length - 1 %};{% else %},{% endif %}{% endfor %}
+}{% endif %}

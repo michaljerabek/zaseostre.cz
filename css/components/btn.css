@@ -1,0 +1,407 @@
+/*====================================================================*/
+/*-------------------------------- BTN -------------------------------*/
+/*====================================================================*/
+
+.btn {
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    color: inherit;
+    background: none;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+
+    touch-action: manipulation;
+
+    transition-property: color;
+    transition-duration: 0.55s;
+    transition-timing-function: cubic-bezier(0, 0, 0.35, 1);
+}
+
+.btn::-moz-focus-inner {
+    padding: 0;
+
+    border: 0;
+}
+
+.btn:hover,
+.btn:focus {
+    transition-duration: 0.225s;
+    transition-timing-function: cubic-bezier(0, 0, 0.35, 1);
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100px;
+    padding: 0.4em 0.8em;
+
+    font-size: 1.5625rem;
+}
+
+@media (max-width: 639px) {
+
+    .btn:not(.btn--big) {
+        padding: 0.5em 1em;
+
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 319px) {
+
+    .btn:not(.btn--big) {
+        padding: 0.4444444em 0.833333333em;
+
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+
+    .btn--big {
+        padding: 0.5em 1em;
+
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 319px) {
+
+    .btn--big {
+        padding: 0.5em 1em;
+
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .btn--big {
+        padding: 0.4285714em 0.857143em;
+
+        font-size: 2.1875rem;
+    }
+}
+
+    .btn > .text {
+        position: relative;
+
+        display: inline-block;
+
+        width: 100%;
+        padding-bottom: 0.2em;
+
+        font-weight: 500;
+        line-height: 1.2em;
+    }
+
+    @media (max-width: 639px) {
+
+        .btn:not(.btn--big) > .text {
+            line-height: 1.25em;
+        }
+    }
+
+    @media (min-width: 640px) {
+
+        .btn--big > .text {
+            font-weight: 400;
+        }
+    }
+
+    @media (min-width: 640px) and (max-width: 767px) {
+
+        .btn--big > .text {
+            line-height: 1.16666666em;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .btn--big > .text {
+            line-height: 1.1428571em;
+        }
+    }
+
+    @media (max-width: 319px) {
+
+        .btn--big > .text {
+            line-height: 1.15em;
+        }
+    }
+
+    .btn .underline {
+        position: absolute;
+        bottom: 0.4em;
+        left: 0.8em;
+
+        width: calc(100% - (0.8em * 2));
+        height: 2px;
+
+        background: currentColor;
+    }
+
+    @media (max-width: 639px) {
+
+        .btn:not(.btn--big) .underline {
+            bottom: 0.5em;
+            left: 1em;
+
+            width: calc(100% - (1em * 2));
+        }
+    }
+
+    @media (max-width: 319px) {
+
+        .btn:not(.btn--big) .underline {
+            bottom: 0.444444em;
+            left: 0.833333em;
+
+            width: calc(100% - (0.833333em * 2));
+        }
+    }
+
+    @media (min-width: 640px) and (max-width: 767px) {
+
+        .btn--big .underline {
+            bottom: 0.5em;
+            left: 1em;
+
+            width: calc(100% - (1em * 2));
+        }
+    }
+
+    @media (max-width: 319px) {
+
+        .btn--big .underline {
+            bottom: 0.5em;
+            left: 1em;
+
+            width: calc(100% - (1em * 2));
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .btn--big .underline {
+            bottom: 0.4285714em;
+            left: 0.857143em;
+
+            width: calc(100% - (0.857143em * 2));
+        }
+    }
+
+/*--------------------------------------------------------------------*/
+/*------------------------------- NEXT -------------------------------*/
+/*--------------------------------------------------------------------*/
+
+.btn--next .underline::before,
+.btn--next .underline::after {
+    content: "";
+
+    position: absolute;
+    right: 0em;
+    bottom: 0;
+
+    width: 0.7em;
+    height: 2px;
+
+    background: currentColor;
+
+    will-change: transform;
+
+    transition: right 0.35s cubic-bezier(0, 0, 0.3, 0.9) 0.3s,
+        transform 0.3s cubic-bezier(.68, .22, .63, .87) 0s;
+}
+
+@media (min-width: 640px) {
+
+    .btn--big.btn--next .underline::before,
+    .btn--big.btn--next .underline::after {
+        width: 0.6em;
+    }
+}
+
+.btn--next .underline::before {
+    transform-origin: right top;
+}
+
+.btn--next .underline::after {
+    transform-origin: right bottom;
+}
+
+.btn--next:focus .underline::before,
+.btn--next:hover .underline::before {
+    transform: rotate(-45deg);
+
+    transition: right 0.3s cubic-bezier(0.7, 0.5, 0.1, 0.8) 0s,
+        transform 0.3s cubic-bezier(0.27, 0.22, 0.2, 1) 0.23s;
+}
+
+.btn--next:focus .underline::after,
+.btn--next:hover .underline::after {
+    transform: rotate(45deg);
+
+    transition: right 0.3s cubic-bezier(0.7, 0.5, 0.1, 0.8) 0s,
+        transform 0.3s cubic-bezier(0.27, 0.22, 0.2, 1) 0.305s;
+}
+
+.btn--next:focus .underline::before,
+.btn--next:hover .underline::before,
+.btn--next:focus .underline::after,
+.btn--next:hover .underline::after {
+    right: -0.7em;
+}
+
+@media (min-width: 640px) {
+
+    .btn--next.btn--big:focus .underline::before,
+    .btn--next.btn--big:hover .underline::before,
+    .btn--next.btn--big:focus .underline::after,
+    .btn--next.btn--big:hover .underline::after {
+        right: -0.6em;
+    }
+}
+
+    .btn--next .underline span {
+        position: absolute;
+
+        right: 0em;
+        z-index: 10;
+
+        width: 0.7em;
+        height: 2px;
+
+        transform: translateX(0em);
+
+        background: currentColor;
+
+        transition: transform 0.3s cubic-bezier(.68, .22, .63, .87) 0s,
+            right 0.35s cubic-bezier(0, 0, 0.3, 0.9) 0.3s;
+    }
+
+    @media (min-width: 640px) {
+
+        .btn--big.btn--next .underline span {
+            width: 0.6em;
+        }
+    }
+
+    .btn--next:focus .underline span,
+    .btn--next:hover .underline span {
+        transform: translateX(0.25em);
+
+        transition: transform 0.3s cubic-bezier(0.27, 0.22, 0.2, 1) 0.305s;
+    }
+
+    @media (min-width: 640px) {
+
+        .btn--big.btn--next:focus .underline span,
+        .btn--big.btn--next:hover .underline span {
+            transform: translateX(0.2em);
+        }
+    }
+
+/*--------------------------------------------------------------------*/
+/*----------------------------- DOWNLOAD -----------------------------*/
+/*--------------------------------------------------------------------*/
+
+.btn--download .underline {
+    transition: width 0.35s cubic-bezier(0, 0, 0.3, 0.9) 0.3s;
+}
+
+.btn--download:hover .underline,
+.btn--download:focus .underline {
+    width: calc(100% - (0.8em * 2) - 0.7em);
+
+    transition: width 0.3s cubic-bezier(0.5, 0.9, 0.7, 1) 0s;
+}
+
+@media (max-width: 639px) {
+
+    .btn--download:hover .underline,
+    .btn--download:focus .underline {
+        width: calc(100% - (1em * 2) - 0.7em);
+    }
+}
+
+@media (max-width: 319px) {
+
+    .btn--download:hover .underline,
+    .btn--download:focus .underline {
+        width: calc(100% - (0.833333em * 2) - 0.7em);
+    }
+}
+
+    .btn--download .underline::before,
+    .btn--download .underline::after {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+
+        width: 0.7em;
+        height: 2px;
+
+        background: currentColor;
+
+        will-change: transform;
+
+        transition: right 0.35s cubic-bezier(0, 0, 0.3, 0.9) 0.3s,
+            transform 0.3s cubic-bezier(0.68, .22, .63, .87) 0s;
+    }
+
+    .btn--download .underline::before {
+        right: 0.7em;
+
+        transform-origin: right bottom;
+    }
+
+    .btn--download .underline::after {
+        right: 0em;
+
+        transform-origin: left bottom;
+    }
+
+    .btn--download:focus .underline::before,
+    .btn--download:hover .underline::before {
+        right: -0.7em;
+
+        transform: translateY(calc(0.35em - 1px)) translateX(-0.1em) rotate(45deg);
+
+        transition: right 0.3s cubic-bezier(0.5, 0.9, 0.7, 1) 0s,
+            transform 0.35s cubic-bezier(0.37, 0.62, 0.35, 1) 0.2s;
+    }
+
+    .btn--download:focus .underline::after,
+    .btn--download:hover .underline::after {
+        right: -1.4em;
+
+        transform: translateY(calc(0.35em - 1px)) translateX(-0.1em) rotate(-45deg);
+
+        transition: right 0.3s cubic-bezier(0.5, 0.9, 0.7, 1) 0s,
+            transform 0.35s cubic-bezier(0.37, 0.62, 0.35, 1) 0.2s;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

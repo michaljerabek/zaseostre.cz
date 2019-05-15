@@ -1,0 +1,1270 @@
+<!DOCTYPE html><!-- Front-End by: Michal Jeřábek | mjerabek.cz -->
+<html class="no-js no-fullscreen" lang="cs">
+<head>
+
+
+    <!--———————————— META-GENERAL ————————————-->
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+
+
+    <!--———————————— META-PAGE ————————————-->
+
+    <title>Cvičení pro vaše oči</title>
+
+
+    <meta name="description" content="Návod, jak se zbavit brýlí a vyléčit zrak.">
+    <meta name="keywords" content="zrak, léčba, krátkozrakost, dalekozrakost, brýle">
+    <meta name="author" content="Michal Jeřábek">
+
+
+    <!--———————————— PRELOAD ————————————-->
+
+    <link href="https://code.jquery.com/jquery-3.4.1.min.js" rel="preload" as="script" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" rel="preload" as="script" crossorigin>
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+
+    <link href="build/all.build.min.css" rel="preload" as="style">
+    <link href="build/all.build.min.js" rel="preload" as="script">
+
+
+    <!--———————————— FAVICON ————————————-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+
+
+    <!--———————————— META-SHARE ————————————-->
+
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zaseostre.cz">
+    <meta property="og:title" content="Cvičení pro vaše oči">
+    <meta property="og:image" content="img/facebook__image.jpg">
+    <meta property="og:description" content="Návod, jak se zbavit brýlí a vyléčit zrak">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="img/twitter__image.jpg">
+    <meta name="twitter:title" content="Cvičení pro vaše oči">
+    <meta name="twitter:description" content="Návod, jak se zbavit brýlí a vyléčit zrak">
+
+
+    <!--———————————— FONTS ————————————-->
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+
+    <!--———————————— SUPPORT ————————————-->
+
+    <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+
+
+    <!--———————————— STYLES ————————————-->
+
+    <!--dev-->
+	<!--<script src="dev/PATHS.js"></script>-->
+	<!--<script src="dev/load-css.js" data-files="all.build.css, print.build.css" data-media="screen, print"></script>-->
+	<!--<noscript><link href="dev/cssimport/all.build.css" rel="stylesheet" media="screen"></noscript>-->
+	<!--/dev-->
+
+    <!--prod-->
+	<link href="build/all.build.min.css" rel="stylesheet" media="screen">
+
+	<script>window.addEventListener("load", function () { document.head.innerHTML += "<link rel=\"stylesheet\" href=\"build/print.build.min.css\" media=\"print\">"; });</script>
+	<noscript><link href="build/print.build.min.css" rel="stylesheet" media="print"></noscript>
+	<!--/prod-->
+
+</head>
+<body>
+
+
+    <!--———————————— CONTENT ————————————-->
+
+
+    <!--––––––––– ** SECTION-INTRO | SECTION ** –––––––––-->
+
+
+    <header class="section-intro section section--current" id="uvod">
+
+        <div class="section__background section-intro__background full-size">
+
+            <div class="section__background-layer section__background-layer--parallax">
+
+                <div class="section__hide-target full-size">
+
+                    <picture aria-hidden="true">
+
+                        <source media="(orientation: landscape) and (min-width: 1920px)" srcset="img/section-intro__background--landscape@2x.jpg">
+                        <source media="(orientation: landscape)" srcset="img/section-intro__background--landscape.jpg 1x, img/section-intro__background--landscape@2x.jpg 2x">
+                        <source media="(orientation: portrait) and (min-height: 1080px)" srcset="img/section-intro__background--portrait@2x.jpg">
+                        <source media="(orientation: portrait)" srcset="img/section-intro__background--portrait.jpg 1x, img/section-intro__background--portrait@2x.jpg 2x">
+
+                        <img class="section-intro__background-img section__background-img full-size" src="img/section-intro__background--landscape.jpg" srcset="img/section-intro__background--landscape.jpg 1x, img/section-intro__background--landscape@2x.jpg 2x" alt="">
+
+                    </picture>
+
+                </div>
+                <!-- /.section__hide-target -->
+
+            </div>
+            <!-- /.section__background-layer -->
+
+        </div>
+        <!-- /.section__background -->
+
+        <div class="section-intro__content section__content section__hide-2-target section__focus-target custom-focus full-size" tabindex="0">
+            <div class="center">
+
+                <p class="section-intro__claim section-intro__claim--1">
+                    Skoncujte <span class="nowrap">s životem</span> <span class="nowrap">v mlze</span>
+                </p>
+
+                <h1 class="section-intro__claim section-intro__claim--2">
+                    Váš zrak může <span class="nowrap">být vyléčen!</span>
+                </h1>
+
+                <a class="section-intro__btn section-intro__btn--hidden btn btn--next btn--big section__link custom-focus x-print" href="#disclaimer" role="button">
+                    <span class="text">Chci vidět více</span>
+                    <span class="underline"><span><!-- css --></span></span>
+                </a>
+
+                <div class="section-intro__background-overlay full-size"><!-- background-color --></div>
+
+            </div><!-- /.center -->
+        </div>
+        <!-- /.section-intro__content section__content -->
+
+    </header>
+    <!-- /.section-intro section -->
+
+
+    <!--––––––––– // SECTION-INTRO | SECTION // –––––––––-->
+
+
+    <main id="main-content">
+
+
+        <!--––––––––– ** SECTION-DISCLAIMER | SECTION-TEXT | SECTION ** –––––––––-->
+
+
+        <article class="section section-disclaimer section-text" id="disclaimer">
+
+            <div class="section__content section__focus-target custom-focus full-size" tabindex="0">
+                <div class="center">
+
+                    <h2 class="visually-hidden x-print">Upozornění</h2>
+
+                    <div class="section-text__wrapper">
+
+                        <div class="section-text__texts section__hide-target">
+
+                            <div class="section-text__text section-text__text--current" aria-live="polite">
+
+                                <p class="x-print">Cvičení uvedená na tomto webu <strong>nejsou rady odborného lékaře</strong> <span class="nowrap">a všechna</span> tak provádíte na vlastní zodpovědnost.</p>
+                                <p class="x-screen">Zde uvedená cvičení <strong>nejsou rady odborného lékaře</strong> <span class="nowrap">a všechna</span> tak provádíte na vlastní zodpovědnost.</p>
+                                <p>Cvičení jsou <span class="nowrap">z důvodu</span> osobní zkušenosti <strong>zaměřená na léčbu krátkozrakosti</strong>, ale většina <span class="nowrap">může být</span> použita <span class="nowrap">i pro</span> léčbu dalekozrakosti <span class="nowrap">a jiných</span> <span class="nowrap">očních vad</span>.</p>
+
+                            </div>
+                            <!-- /.section-text__text -->
+
+                        </div>
+                        <!-- /.section-text__texts -->
+
+                        <div class="section__hide-2-target x-print">
+
+                            <a class="x-no-js section-text__btn btn btn--next section__link custom-focus" href="#obecne-informace__bryle" role="button">
+                                <span class="text">Rozumím</span>
+                                <span class="underline"><span><!--css --></span></span>
+                            </a>
+
+                            <a class="x-js section-text__btn btn btn--next section__link custom-focus" href="#obecne-informace" role="button">
+                                <span class="text">Rozumím</span>
+                                <span class="underline"><span><!--css --></span></span>
+                            </a>
+
+                        </div>
+                        <!-- /.section__hide2-target -->
+
+                    </div>
+                    <!-- /.section-text__text -->
+
+                </div><!-- /.center -->
+            </div>
+            <!-- /.section__content -->
+
+        </article>
+        <!-- /.section section-disclaimer section-text -->
+
+
+        <!--––––––––– // SECTION-DISCLAIMER | SECTION-TEXT | SECTION // –––––––––-->
+
+
+        <hr class="x-screen">
+
+
+        <!--––––––––– ** SECTION-GENERAL-INFO | SECTION-TEXT | SECTION ** –––––––––-->
+
+
+        <article class="section section-general-info section-text" id="obecne-informace">
+
+            <div class="section__content section__focus-target custom-focus full-size" tabindex="0">
+                <div class="center">
+
+                    <h2 class="visually-hidden x-print">Úvodní informace</h2>
+
+                    <div class="section-text__wrapper">
+
+                        <div class="section-text__texts section__hide-target">
+
+                            <section class="section-text__text section-text__text--current" id="obecne-informace__bryle" aria-live="polite">
+
+                                <h3 class="visually-hidden x-print">Odložte své brýle</h3>
+
+                                <p><strong>Chcete-li vidět bez brýlí, musíte <span class="nowrap">je nejdříve</span> odložit!</strong> Nemáte-li více <span class="nowrap">než 2 dioptrie</span>, nenoste je vůbec <span class="nowrap">(s výjimkou</span> činností, kde byste mohli ohrožovat něčí nebo svůj život). <span class="nowrap">V opačném</span> případě, je noste co nejméně. (Kupte si také <span class="nowrap">o něco</span> slabší, než momentálně <span class="nowrap">potřebujete.)</span></p>
+
+                            </section>
+                            <!-- /.section-text__text -->
+
+                            <section class="section-text__text" id="obecne-informace__pretezovani" aria-live="polite">
+
+                                <h3 class="visually-hidden x-print">Změňte přístup</h3>
+
+                                <p>Začněte ke svému <span class="nowrap">zraku přistupovat</span> <span class="nowrap">s respektem</span> <span class="nowrap">a<strong> přestaňte</strong></span> <strong>své oči přetěžovat</strong> dlouhým zíráním na jedno jediné místo. Oči potřebují změnu! Dělejte si proto při práci časté přestávky, <strong>dívejte se do dálky</strong> <span class="nowrap">a prohlížejte</span> <span class="nowrap">si horizont</span>.</p>
+
+                            </section>
+                            <!-- /.section-text__text -->
+
+                            <a class="section-text__btn btn btn--next custom-focus x-js x-print" href="#_cviceni" role="button">
+                                <span class="text">Pokračovat</span>
+                                <span class="underline"><span><!--css --></span></span>
+                            </a>
+
+                        </div>
+                        <!-- /.section-text__texts -->
+
+
+                        <!--––––––––– ** CONTROLLER ** –––––––––-->
+
+
+                        <div class="section-text__controller controller section__hide-2-target x-no-js">
+
+                            <button class="controller__btn controller__btn--prev hf-color-highlight clear-button" data-controller-prev-section="disclaimer">
+                                <span class="icon"><!-- css --></span>
+                                <span class="visually-hidden">Vrátit se</span>
+                            </button>
+
+                            <button class="controller__btn controller__btn--next hf-color-highlight clear-button" data-controller-next-section="cviceni">
+                                <span class="icon"><!-- css --></span>
+                                <span class="visually-hidden">Pokračovat</span>
+                            </button>
+
+                        </div>
+                        <!-- /.section-text__controller controller section__hide2-target -->
+
+
+                        <!--––––––––– // CONTROLLER // –––––––––-->
+
+
+                    </div>
+                    <!-- /.section-text__text -->
+
+                </div><!-- /.center -->
+            </div>
+            <!-- /.section__content -->
+
+        </article>
+        <!-- /.section section-general-info section-text -->
+
+
+        <!--––––––––– // SECTION-GENERAL-INFO | SECTION-TEXT | SECTION // –––––––––-->
+
+
+        <hr class="x-screen">
+
+
+        <!--––––––––– ** SECTION-EXERCISES | SECTION ** –––––––––-->
+
+
+        <div class="x-js section-exercises__no-js-target" id="_cviceni"><!-- :target --></div>
+        <div class="x-js section-exercises__no-js-target" id="_cviceni__uvolnovaci-cviceni"><!-- :target --></div>
+        <div class="x-js section-exercises__no-js-target" id="_cviceni__korekcni-cviceni"><!-- :target --></div>
+        <div class="x-js section-exercises__no-js-target" id="_cviceni__cviceni-akomodace"><!-- :target --></div>
+        <div class="x-js section-exercises__no-js-target" id="_cviceni__ocni-cviceni"><!-- :target --></div>
+
+        <article class="section section-exercises" id="cviceni">
+
+            <div class="section__background section-exercises__background full-size">
+
+                <div class="section__background-layer section__background-layer--parallax">
+
+                    <div class="section-exercises__background-toggle-exercise-animation full-size">
+
+                        <div class="section__hide-target full-size">
+
+                            <noscript class="section__img-to-load">
+                                <picture aria-hidden="true">
+
+                                    <source media="(orientation: landscape) and (max-width: 1023px)" srcset="img/section-exercises__background--landscape-tablet.jpg 1x, img/section-exercises__background--landscape-tablet@2x.jpg 2x">
+                                    <source media="(orientation: landscape) and (min-width: 1920px)" srcset="img/section-exercises__background--landscape@2x.jpg">
+                                    <source media="(orientation: landscape)" srcset="img/section-exercises__background--landscape.jpg 1x, img/section-exercises__background--landscape@2x.jpg 2x">
+                                    <source media="(orientation: portrait) and (min-height: 1080px)" srcset="img/section-exercises__background--portrait@2x.jpg">
+                                    <source media="(orientation: portrait)" srcset="img/section-exercises__background--portrait.jpg 1x, img/section-exercises__background--portrait@2x.jpg 2x">
+
+                                    <img class="section-exercises__background-img section__background-img full-size" src="img/section-exercises__background--landscape.jpg" srcset="img/section-exercises__background--landscape.jpg 1x, img/section-exercises__background--landscape@2x.jpg 2x" alt="">
+
+                                </picture>
+                            </noscript>
+
+                        </div>
+                        <!-- /.section__hide-target -->
+
+                    </div>
+                    <!-- /.section-exercises__background-toggle-exercise-animation -->
+
+                </div>
+                <!-- /.section__background-layer -->
+
+            </div>
+            <!-- /.section__background -->
+
+            <div class="section-exercises__content section__content full-size">
+
+                <header class="center section__hide-2-target section__focus-target custom-focus" tabindex="0">
+
+                    <div class="section-exercises__content-toggle-exercise-animation">
+
+                        <div class="section-exercises__exercises">
+
+                            <h2 class="section-exercises__title color-primary">
+                                Cvičení, která vám pomohou vrátit váš zrak
+                            </h2>
+
+                            <ul class="section-exercises__items x-print">
+
+                                <li class="section-exercises__item section-exercises__item--relax">
+
+                                    <div class="section-exercises__item-glow"><!-- css --></div>
+
+                                    <a class="section-exercises__link 1:1 color-current hf-color-current" href="#_cviceni__uvolnovaci-cviceni">
+                                        <div class="section-exercises__link-opacity-trigger wrapper">
+
+                                            <noscript class="section__img-to-load">
+                                                <img class="section-exercises__nav-img full-size" src="img/section-exercises__nav-bg--relax.jpg" srcset="img/section-exercises__nav-bg--relax.jpg 1x, img/section-exercises__nav-bg--relax@2x.jpg 2x" alt="" aria-hidden="true">
+                                            </noscript>
+
+                                            <span class="text">Uvolňovací<br>cvičení</span>
+
+                                        </div><!-- /.wrapper -->
+                                    </a>
+
+                                </li>
+                                <!-- /.section-exercises__item -->
+
+                                <li class="section-exercises__item section-exercises__item--table">
+
+                                    <div class="section-exercises__item-glow"><!-- css --></div>
+
+                                    <a class="section-exercises__link 1:1 color-current hf-color-current" href="#_cviceni__korekcni-cviceni">
+                                        <div class="section-exercises__link-opacity-trigger wrapper">
+
+                                            <noscript class="section__img-to-load">
+                                                <img class="section-exercises__nav-img full-size" src="img/section-exercises__nav-bg--table.jpg" srcset="img/section-exercises__nav-bg--table.jpg 1x, img/section-exercises__nav-bg--table@2x.jpg 2x" alt="" aria-hidden="true">
+                                            </noscript>
+
+                                            <span class="text">Korekční<br>cvičení</span>
+
+                                        </div><!-- /.wrapper -->
+                                    </a>
+
+                                </li>
+                                <!-- /.section-exercises__item -->
+
+                                <li class="section-exercises__item section-exercises__item--accommodation">
+
+                                    <div class="section-exercises__item-glow"><!-- css --></div>
+
+                                    <a class="section-exercises__link 1:1 color-current hf-color-current" href="#_cviceni__cviceni-akomodace">
+                                        <div class="section-exercises__link-opacity-trigger wrapper">
+
+                                            <noscript class="section__img-to-load">
+                                                <img class="section-exercises__nav-img full-size" src="img/section-exercises__nav-bg--accommodation.jpg" srcset="img/section-exercises__nav-bg--accommodation.jpg 1x, img/section-exercises__nav-bg--accommodation@2x.jpg 2x" alt="" aria-hidden="true">
+                                            </noscript>
+
+                                            <span class="text">Cvičení<br>akomodace</span>
+
+                                        </div><!-- /.wrapper -->
+                                    </a>
+
+                                </li>
+                                <!-- /.section-exercises__item -->
+
+                                <li class="section-exercises__item section-exercises__item--eye-exercises">
+
+                                    <div class="section-exercises__item-glow"><!-- css --></div>
+
+                                    <a class="section-exercises__link 1:1 color-current hf-color-current" href="#_cviceni__ocni-cviceni">
+                                        <div class="section-exercises__link-opacity-trigger wrapper">
+
+                                            <noscript class="section__img-to-load">
+                                                <img class="section-exercises__nav-img full-size" src="img/section-exercises__nav-bg--eye-exercises.jpg" srcset="img/section-exercises__nav-bg--eye-exercises.jpg 1x, img/section-exercises__nav-bg--eye-exercises@2x.jpg 2x" alt="" aria-hidden="true">
+                                            </noscript>
+
+                                            <span class="text">Oční<br>cvičení</span>
+
+                                        </div><!-- /.wrapper -->
+                                    </a>
+
+                                </li>
+                                <!-- /.section-exercises__item -->
+
+                            </ul>
+                            <!-- /.section-exercises__items -->
+
+                        </div>
+                        <!-- /.section-exercises__exercises -->
+
+
+                        <!--––––––––– ** CONTROLLER ** –––––––––-->
+
+
+                        <nav class="section-exercises__controller controller section__hide-2-target">
+
+                            <h2 class="visually-hidden">Hlavní navigace</h2>
+
+                            <button class="x-no-js controller__btn controller__btn--prev color-primary hf-color-current clear-button" data-controller-prev-section="obecne-informace__pretezovani">
+                                <span class="shadow full-size">
+                                    <span class="icon"><!-- css --></span>
+                                    <span class="visually-hidden">Vrátit se</span>
+                                </span>
+                            </button>
+
+                            <button class="x-no-js controller__btn controller__btn--next color-primary hf-color-current clear-button" data-controller-next-section="zaver__pristup">
+                                <span class="shadow full-size">
+                                    <span class="icon"><!-- css --></span>
+                                    <span class="visually-hidden">Pokračovat</span>
+                                </span>
+                            </button>
+
+                            <a class="x-js section-exercises__no-js-btn btn btn--next custom-focus" href="#zaver">
+                                <span class="text">Pokračovat</span>
+                                <span class="underline"><span><!-- css --></span></span>
+                            </a>
+
+                        </nav>
+                        <!-- /.section-exercises__controller controller section__hide2-target -->
+
+
+                        <!--––––––––– // CONTROLLER // –––––––––-->
+
+
+                    </div>
+                    <!-- /.section-exercises__content-toggle-exercise-animation -->
+
+                </header>
+                <!-- /.center -->
+
+            </div>
+            <!-- /.section__content -->
+
+            <div class="section-exercises__toggle-exercise-overlay full-size" aria-hidden="true"><!-- css --></div>
+
+
+            <!--––––––––– ** SECTION-EXERCISE | SECTION ** –––––––––-->
+
+
+            <article class="section-exercise section-exercise--relax section full-size" id="cviceni__uvolnovaci-cviceni">
+
+                <div class="section__background section-exercise__background section-exercise__background--from-bottom full-size">
+
+                    <div class="section__background-layer section__background-layer--parallax">
+
+                        <div class="section__hide-target full-size">
+
+                            <noscript class="section__img-to-load">
+                                <picture aria-hidden="true">
+
+                                    <source media="(orientation: landscape) and (max-width: 1259px)" srcset="img/section-exercise--relax__background--landscape-desktop-s.jpg 1x, img/section-exercise--relax__background--landscape-desktop-s@2x.jpg 2x">
+                                    <source media="(orientation: landscape) and (max-width: 1023px)" srcset="img/section-exercise--relax__background--landscape-tablet.jpg 1x, img/section-exercise--relax__background--landscape-tablet@2x.jpg 2x">
+                                    <source media="(orientation: landscape) and (min-width: 1920px)" srcset="img/section-exercise--relax__background--landscape@2x.jpg">
+                                    <source media="(orientation: landscape)" srcset="img/section-exercise--relax__background--landscape.jpg 1x, img/section-exercise--relax__background--landscape@2x.jpg 2x">
+                                    <source media="(orientation: portrait) and (min-height: 1080px)" srcset="img/section-exercise--relax__background--portrait@2x.jpg">
+                                    <source media="(orientation: portrait)" srcset="img/section-exercise--relax__background--portrait.jpg 1x, img/section-exercise--relax__background--portrait@2x.jpg 2x">
+
+                                    <img class="section-exercise__background-img section__background-img full-size" src="img/section-exercise--relax__background--landscape.jpg" srcset="img/section-exercise--relax__background--landscape.jpg 1x, img/section-exercise--relax__background--landscape@2x.jpg 2x" alt="">
+
+                                </picture>
+                            </noscript>
+
+                        </div>
+                        <!-- /.section__hide-target -->
+
+                    </div>
+                    <!-- /.section__background-layer -->
+
+                </div>
+                <!-- /.section__background -->
+
+                <div class="section__hide-2-target">
+
+                    <div class="section-exercise__content-background-center center">
+                        <div class="section-exercise__content-background"><!-- css --></div>
+                    </div>
+                    <!-- /.section-exercise__content-background-center center -->
+
+                    <button class="x-no-js section-exercise__close color-primary hf-color-current clear-button">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </button>
+
+                    <a class="x-js section-exercise__close color-primary hf-color-current" href="#_cviceni">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </a>
+
+                    <div class="section-exercise__content section__content section__focus-target custom-focus full-size" tabindex="0">
+                        <div class="center">
+
+                            <div class="section-exercise__content-box">
+
+                                <h3 class="section-exercise__title">
+                                    Uvolňovací cvičení
+                                </h3>
+
+                                <div class="section-exercise__content-wrapper color-primary">
+
+                                    <p>Následující cvičení provádějte vždy, když ucítíte napětí v&nbsp;očích, po delší práci, pokud ztratíte pozitivní náladu nebo kdykoliv vám to přijde vhodné. Budete ho také potřebovat při <i>Korekčním cvičení</i>.</p>
+
+                                    <h4>Postup</h4>
+
+                                    <ol>
+                                        <li>Sedněte si rovně na židli. Uvolněte se. Zlehka zamrkejte očima.</li>
+                                        <li>Zahřejte si dlaně třením o&nbsp;sebe a&nbsp;zakryjte si oči tak, aby se dlaně nedotýkaly očí (ani řas) a&nbsp;nepronikalo jimi žádné světlo. Teprve potom zavřete oči.</li>
+                                        <li>Buďte naprosto uvolnění, v&nbsp;naprostém klidu. Na nic nemyslete, nic neřešte. Jen buďte v&nbsp;přítomnosti. Prohlížejte si temnotu nebo jakýkoliv objekt/obraz ve&nbsp;vzdálenosti, na kterou špatně vidíte, ale <strong>představujte si ho ostře</strong>. Můžete si také představovat váš pracovní řádek v&nbsp;tabulce (vysvětleno v&nbsp;<i>Korekčním cvičení</i>).</li>
+                                        <li>Poté svou pozornost přeneste do břicha a&nbsp;vytvořte zde pocit naprostého klidu a&nbsp;uvolnění.</li>
+                                        <li>Můžete také postupně přenést pozornost do oblasti jater a&nbsp;ledvin (tyto orgány významně souvisí se zrakem) a&nbsp;přenést tam co nejvíce pozitivní energie.</li>
+                                        <li>Dejte ruce dolů, ale oči ještě neotvírejte.</li>
+                                        <li>Stále udržujte pocit klidu a&nbsp;uvolnění a&nbsp;teprve po nějaké chvíli <strong>v&nbsp;pozitivním očekávání</strong> oči <em>pomalu</em> otevřete.</li>
+                                    </ol>
+
+                                </div>
+                                <!-- /.section-exercise__content-wrapper -->
+
+                            </div>
+                            <!-- /.section-exercise__content-box -->
+
+                        </div><!-- /.center -->
+                    </div>
+                    <!-- /.section-exercise__content -->
+
+                </div>
+                <!-- /.section__hide-2-target -->
+
+            </article>
+            <!-- /.section-exercise section -->
+
+
+            <!--––––––––– // SECTION-EXERCISE | SECTION // –––––––––-->
+
+
+            <!--––––––––– ** SECTION-EXERCISE | SECTION ** –––––––––-->
+
+
+            <article class="section-exercise-table section-exercise section-exercise--table section full-size" id="cviceni__korekcni-cviceni">
+
+                <div class="section__background section-exercise__background  section-exercise__background--from-left full-size">
+
+                    <div class="section__background-layer section__background-layer--parallax">
+
+                        <div class="section__hide-target full-size">
+
+                            <noscript class="section__img-to-load">
+                                <picture aria-hidden="true">
+
+                                    <source media="(orientation: landscape) and (max-width: 1259px)" srcset="img/section-exercise--table__background--landscape-desktop-s.jpg 1x, img/section-exercise--table__background--landscape-desktop-s@2x.jpg 2x">
+                                    <source media="(orientation: landscape) and (max-width: 1023px)" srcset="img/section-exercise--table__background--landscape-tablet.jpg 1x, img/section-exercise--table__background--landscape-tablet@2x.jpg 2x">
+                                    <source media="(orientation: landscape) and (min-width: 1920px)" srcset="img/section-exercise--table__background--landscape@2x.jpg">
+                                    <source media="(orientation: landscape)" srcset="img/section-exercise--table__background--landscape.jpg 1x, img/section-exercise--table__background--landscape@2x.jpg 2x">
+                                    <source media="(orientation: portrait) and (min-height: 1080px)" srcset="img/section-exercise--table__background--portrait@2x.jpg">
+                                    <source media="(orientation: portrait)" srcset="img/section-exercise--table__background--portrait.jpg 1x, img/section-exercise--table__background--portrait@2x.jpg 2x">
+
+                                    <img class="section-exercise__background-img section__background-img full-size" src="img/section-exercise--table__background--landscape.jpg" srcset="img/section-exercise--table__background--landscape.jpg 1x, img/section-exercise--table__background--landscape@2x.jpg 2x" alt="">
+
+                                </picture>
+                            </noscript>
+
+                        </div>
+                        <!-- /.section__hide-target -->
+
+                    </div>
+                    <!-- /.section__background-layer -->
+
+                </div>
+                <!-- /.section__background -->
+
+                <div class="section__hide-2-target">
+
+                    <div class="section-exercise__content-background-center center">
+                        <div class="section-exercise__content-background"><!-- css --></div>
+                    </div>
+                    <!-- /.section-exercise__content-background-center center -->
+
+                    <button class="x-no-js section-exercise__close color-primary hf-color-current clear-button">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </button>
+
+                    <a class="x-js section-exercise__close color-primary hf-color-current" href="#_cviceni">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </a>
+
+                    <div class="section-exercise__content section__content section__focus-target custom-focus full-size" tabindex="0">
+                        <div class="center">
+
+                            <div class="section-exercise__content-box">
+
+                                <h3 class="section-exercise__title">
+                                    Korekční cvičení
+                                </h3>
+
+                                <div class="section-exercise__content-wrapper color-primary">
+
+                                    <p>Následující <strong>cvičení je naprosto klíčové</strong> a&nbsp;je potřeba ho provádět každý den. Ideálně dvakrát denně.</p>
+                                    <p>Cvičení vychází z&nbsp;knihy <cite>Jak se zbavit brýlí</cite> od <cite>Mirzakarima S.&nbsp;Norbekova</cite>.</p>
+                                    <p class="x-print"><strong>K&nbsp;tomuto cvičení si stáhněte a&nbsp;vytiskněte tuto tabulku (PDF):</strong></p>
+                                    <p class="x-screen">K&nbsp;tomuto cvičení budete potřebovat tabulku, kterou najdete na konci. První je určena pro krátkozrakost, druhá pro dalekozrakost. Připadně si ji můžete stáhnou zde:</p>
+
+                                    <div class="section-exercise__color btns">
+
+                                        <a class="btn btn--download color-primary hf-color-current x-print-href" href="files/tabulka-kratkozrakost.pdf" download>
+                                            <span class="text" data-print-after=": https://zaseostre.cz/files/tabulka-kratkozrakost.pdf">Pro krátkozrakost</span>
+                                            <span class="underline"><!-- css --></span>
+                                        </a>
+
+                                        <br class="x-screen">
+
+                                        <a class="btn btn--download color-primary hf-color-current x-print-href" href="files/tabulka-dalekozrakost.pdf" download>
+                                            <span class="text" data-print-after=": https://zaseostre.cz/files/tabulka-dalekozrakost.pdf">Pro dalekozrakost</span>
+                                            <span class="underline"><!-- css --></span>
+                                        </a>
+
+                                    </div>
+                                    <!-- /.section-exercise__color -->
+
+                                    <h4>Postup</h4>
+
+                                    <ol>
+                                        <li>V&nbsp;případě krátkozrakosti připevněte tabulku před sebe asi na vzdálenost natažené ruky. (Vidíte-li i&nbsp;poslední řádek, pak ještě dále.) V&nbsp;případě dalekozrakosti ve vzdálenosti 15–20 cm.</li>
+                                        <li>Najděte si svůj pracovní řádek, tedy řádek, který jste ještě schopni přečíst. (Neposouvejte se ale příliš rychle, výsledek zlepšení je potřeba zafixovat.)</li>
+                                        <li>Seďte napnutí jako byste očekávali něco velkého a&nbsp;usmívejte se u&nbsp;toho. Mějte radost z&nbsp;toho, že se zase přiblížíte ke svému cíli. Čím více, tím lépe!</li>
+                                        <li>Proveďte <i>Uvolňovací cvičení</i>.</li>
+                                        <li>Nyní po dobu 30 vteřin přejíždějte očima (!) po řádku z&nbsp;jedné strany na druhou. Mějte představu zaostřování, jako když ostříte objektivem. <strong>Na oči ale netlačte silou!</strong> Spíše si řádek prohlížejte nenápadně. V&nbsp;podstatě se ho vůbec nestažte <i>vidět očima</i>. Musíte se na něj ale dívat s&nbsp;naprostým nadšením. Při tom si neustále zlepšujte náladu a&nbsp;zachytávejte každé zlepšení vidění. Až se vám &bdquo;spustí zrak&ldquo;, tak udržujte náladu, ve které jste. Pak si dejte několik vteřin pauzu a&nbsp;celý proces zopakujete ještě dvakrát. (Nezapomeňte také mrkat.)</li>
+                                        <li>Proveďte <i>Uvolňovací cvičení</i>. (Dívejte se na řádek a&nbsp;poté teprve zakryjte oči. Po skončení pomalu oči otevřete a&nbsp;podívejte se na váš řádek.)</li>
+                                        <li>Potom se otočte tak, aby na tabulku dopadalo světlo pod jiným úhlem a&nbsp;zopakujte krok&nbsp;4.</li>
+                                        <li>Proveďte <i>Uvolňovací cvičení</i>.</li>
+                                        <li>Opět zopakujte jednou krok číslo 4, ale jedno oko zakryjte rukou. Oko ale nechte otevřené a&nbsp;stále s&nbsp;ním &bdquo;sledujte&ldquo; řádek.</li>
+                                        <li>Nyní to samé s&nbsp;druhým okem.</li>
+                                        <li>Potom krátce proveďte <i>Uvolňovací cvičení</i>.</li>
+                                        <li>A&nbsp;ještě jednou proveďte krok 4 s&nbsp;oběma očima.</li>
+                                        <li>Opět proveďte <i>Uvolňovací cvičení</i>.</li>
+                                        <li>Nakonec, až otevřete oči, si ještě chvíli prohlížejte tabulku. Podívejte se na řádky níž, potom na řádky výš.</li>
+                                    </ol>
+
+                                    <p>Po skončení ale nesmíte cvičení hodit za hlavu. Běžte se třeba podívat z&nbsp;okna a&nbsp;užívejte si zlepšení.</p>
+                                    <p><strong>Cvičení nikdy nesmíte začít provádět mechanicky nebo jen tak mimochodem</strong>, abyste to měli rychle za sebou. Vždy je potřeba k&nbsp;němu přistupovat s&nbsp;nadšením a&nbsp;očekáváním, jako když cvičíte poprvé!</p>
+                                    <p>&bdquo;Trik&ldquo; ale nespočívá v&nbsp;usilovném zírání na tabulku a&nbsp;čekání, co se stane. Je to o&nbsp;tom, že musíte aktivně na sobě pracovat. Musíte se dostat do stavu maximální sebedůvěry a&nbsp;optimismu.</p>
+                                    <p>Během cvičení se občas místo zaostření písmena rozostří, což je normální součást procesu. Pokud se vám během určité části nepodaří dosáhnout zlepšení, nesmíte to vzdávat ani být na sebe naštvaní. Prostě to přejděte a&nbsp;pokračujte dál s&nbsp;maximálním nadšením. (Nejtěžší to může být, pokud se to stane na konci. Ale nenechte se tím rozhodit.)</p>
+                                    <p>Máte-li problém pouze s&nbsp;jedním okem, pak to druhé zakryjte a&nbsp;cvičte jen na jedno oko.</p>
+
+                                </div>
+                                <!-- /.section-exercise__content-wrapper -->
+
+                            </div>
+                            <!-- /.section-exercise__content-box -->
+
+                        </div><!-- /.center -->
+                    </div>
+                    <!-- /.section-exercise__content -->
+
+                </div>
+                <!-- /.section__hide-2-target -->
+
+            </article>
+            <!-- /.section-exercise-table section-exercise section -->
+
+
+            <!--––––––––– // SECTION-EXERCISE-TABLE | SECTION-EXERCISE | SECTION // –––––––––-->
+
+
+            <!--––––––––– ** SECTION-EXERCISE | SECTION ** –––––––––-->
+
+
+            <article class="section-exercise section-exercise--accommodation section full-size" id="cviceni__cviceni-akomodace">
+
+                <div class="section__background section-exercise__background section-exercise__background--from-top full-size">
+
+                    <div class="section__background-layer section__background-layer--parallax">
+
+                        <div class="section__hide-target full-size">
+
+                            <noscript class="section__img-to-load">
+                                <picture aria-hidden="true">
+
+                                    <source media="(orientation: landscape) and (max-width: 1023px)" srcset="img/section-exercise--accommodation__background--landscape-tablet.jpg 1x, img/section-exercise--accommodation__background--landscape-tablet@2x.jpg 2x">
+                                    <source media="(orientation: landscape) and (min-width: 1920px)" srcset="img/section-exercise--accommodation__background--landscape@2x.jpg">
+                                    <source media="(orientation: landscape)" srcset="img/section-exercise--accommodation__background--landscape.jpg 1x, img/section-exercise--accommodation__background--landscape@2x.jpg 2x">
+                                    <source media="(orientation: portrait) and (min-height: 1080px)" srcset="img/section-exercise--accommodation__background--portrait@2x.jpg">
+                                    <source media="(orientation: portrait)" srcset="img/section-exercise--accommodation__background--portrait.jpg 1x, img/section-exercise--accommodation__background--portrait@2x.jpg 2x">
+
+                                    <img class="section-exercise__background-img section__background-img full-size" src="img/section-exercise--accommodation__background--landscape.jpg" srcset="img/section-exercise--accommodation__background--landscape.jpg 1x, img/section-exercise--accommodation__background--landscape@2x.jpg 2x" alt="">
+
+                                </picture>
+                            </noscript>
+
+                        </div>
+                        <!-- /.section__hide-target -->
+
+                    </div>
+                    <!-- /.section__background-layer -->
+
+                </div>
+                <!-- /.section__background -->
+
+                <div class="section__hide-2-target">
+
+                    <div class="section-exercise__content-background-center center">
+                        <div class="section-exercise__content-background"><!-- css --></div>
+                    </div>
+                    <!-- /.section-exercise__content-background-center center -->
+
+                    <button class="x-no-js section-exercise__close color-primary hf-color-current clear-button">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </button>
+
+                    <a class="x-js section-exercise__close color-primary hf-color-current" href="#_cviceni">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </a>
+
+                    <div class="section-exercise__content section__content section__focus-target custom-focus full-size" tabindex="0">
+                        <div class="center">
+
+                            <div class="section-exercise__content-box">
+
+                                <h3 class="section-exercise__title">
+                                    Cvičení akomodace
+                                </h3>
+
+                                <div class="section-exercise__content-wrapper color-primary">
+
+                                    <p>K&nbsp;tomuto cvičení si <strong>najděte nějaký menší obrázek ideálně v&nbsp;zelených barvách</strong>.</p>
+                                    <p>Cvičení je potřeba provádět <strong>s&nbsp;maximálním soustředěním a&nbsp;nadšením</strong>.</p>
+
+                                    <h4>Postup</h4>
+
+                                    <ol>
+                                        <li>Stoupněte si nebo si sedněte před okno a&nbsp;držte obrázek před sebou ve vzdálenosti 20–25 cm mírně pod úrovní očí.</li>
+                                        <li>Po dobu asi deseti minut si 3–5 vteřin prohlížejte obrázek a&nbsp;pak 3–5 vteřin nějaký zelený objekt v&nbsp;dálce, který vidíte rozmazaně. Tyto objekty pokaždé měňte.</li>
+                                    </ol>
+
+                                    <p>Cvičení je potřeba provádět 2x denně a&nbsp;rozestup mezi nimi nesmí přesáhnout 2&nbsp;hodiny.</p>
+                                    <p><strong>Pokud ucítíte bolest nebo napětí v&nbsp;očích, zamrkejte nebo na chvíli zavřete oči.</strong></p>
+
+                                </div>
+                                <!-- /.section-exercise__content-wrapper -->
+
+                            </div>
+                            <!-- /.section-exercise__content-box -->
+
+                        </div><!-- /.center -->
+                    </div>
+                    <!-- /.section-exercise__content -->
+
+                </div>
+                <!-- /.section__hide-2-target -->
+
+            </article>
+            <!-- /.section-exercise section -->
+
+
+            <!--––––––––– // SECTION-EXERCISE | SECTION // –––––––––-->
+
+
+            <!--––––––––– ** SECTION-EXERCISE-EYE-EXERCISES | SECTION-EXERCISE | SECTION ** –––––––––-->
+
+
+            <article class="section-exercise-eye-exercises section-exercise section-exercise--eye-exercises section full-size" id="cviceni__ocni-cviceni">
+
+                <div class="section__background section-exercise__background section-exercise__background--from-front full-size">
+
+                    <div class="section__background-layer section__background-layer--parallax">
+
+                        <div class="section__hide-target full-size">
+
+                            <noscript class="section__img-to-load">
+                                <picture aria-hidden="true">
+
+                                    <source media="(orientation: landscape) and (min-width: 1920px)" srcset="img/section-exercise--eye-exercises__background--landscape@2x.jpg">
+                                    <source media="(orientation: landscape)" srcset="img/section-exercise--eye-exercises__background--landscape.jpg 1x, img/section-exercise--eye-exercises__background--landscape@2x.jpg 2x">
+                                    <source media="(orientation: portrait) and (min-height: 1080px)" srcset="img/section-exercise--eye-exercises__background--portrait@2x.jpg">
+                                    <source media="(orientation: portrait)" srcset="img/section-exercise--eye-exercises__background--portrait.jpg 1x, img/section-exercise--eye-exercises__background--portrait@2x.jpg 2x">
+
+                                    <img class="section-exercise__background-img section__background-img full-size" src="img/section-exercise--eye-exercises__background--landscape.jpg" srcset="img/section-exercise--eye-exercises__background--landscape.jpg 1x, img/section-exercise--eye-exercises__background--landscape@2x.jpg 2x" alt="">
+
+                                </picture>
+                            </noscript>
+
+                        </div>
+                        <!-- /.section__hide-target -->
+
+                    </div>
+                    <!-- /.section__background-layer -->
+
+                </div>
+                <!-- /.section__background -->
+
+                <div class="section__hide-2-target full-size">
+
+                    <button class="x-no-js section-exercise__close color-primary hf-color-current clear-button">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </button>
+
+                    <a class="x-js section-exercise__close color-primary hf-color-current" href="#_cviceni">
+                        <span class="visually-hidden">Zavřít a přejít zpět na seznam všech cvičení</span>
+                        <span class="icon"><!-- css --></span>
+                    </a>
+
+                    <div class="section-exercise__content section-exercise__content--no-fade section__content section__focus-target custom-focus full-size" tabindex="0">
+                        <div class="center">
+
+                            <div class="section-exercise-eye-exercises__content-box">
+
+                                <h3 class="visually-hidden">
+                                    Oční cvičení
+                                </h3>
+
+                                <ul class="section-exercise-eye-exercises__exercises color-primary">
+
+                                    <li class="section-exercise-eye-exercises__exercise section-exercise-eye-exercises__exercise--current print-clear-list">
+
+                                        <div class="section-exercise-eye-exercises__switch-animation-1-target">
+
+                                            <p class="section-exercise-eye-exercises__exercise-text">
+                                                Následující cvičení pochází z&nbsp;YouTube kanálu <a href="https://www.youtube.com/channel/UC4rlAVgAK0SGk-yTfe48Qpw" lang="en" target="_blank"><i>Bright&nbsp;Side</i></a>.
+                                            </p>
+
+                                            <p class="section-exercise-eye-exercises__exercise-text">
+                                                Cvičení je potřeba provádět <strong>s&nbsp;maximálním soustředěním</strong> a&nbsp;to&nbsp;minimálně jednou&nbsp;denně.
+                                            </p>
+
+                                        </div>
+                                        <!-- /.section-exercise-eye-exercises__switch-animation-1-target -->
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            <strong>Kdykoliv ucítíte napětí, na chvíli přestaňte a&nbsp;zamrkejte nebo na chvíli zavřete oči.</strong>
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise1.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Mrkejte rychle za sebou po dobu 30–60 vteřin
+                                            <br class="x-tablet-s x-mobile">(asi 3–4 mrknutí za&nbsp;vteřinu).
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise2.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Dívejte se stále před sebe a&nbsp;otáčejte hlavou. Nejdříve zleva doprava, potom nahoru a&nbsp;dolů. Alespoň 30&nbsp;vteřin.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise3.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Podívejte se pomalu co nejdále do strany, ale <strong>ne s&nbsp;velkým napětím</strong>, a&nbsp;potom pomalu přesuňte oči na druhou stranu. Potom zase zpět. Alespoň 3x. Nakonec na chvíli zavřete oči. Cvičení pak opakujte se zavřenýma&nbsp;očima.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise4.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Podívejte se pomalu co nejníže, ale <strong>ne s&nbsp;velkým napětím</strong>, a&nbsp;potom pomalu přesuňte oči směrem nahoru. Potom zase zpět dolů. Alespoň 3x. Nakonec na chvíli zavřete oči. Cvičení pak opakujte se zavřenýma&nbsp;očima.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise5.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Zavřete oči a&nbsp;relaxujte alespoň jednu&nbsp;minutu.
+                                            <br class="x-tablet-s x-mobile">Myslete přitom na něco&nbsp;pozitivního.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise6.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Začněte kroužením očima a&nbsp;potom opisujte znak nekonečno. Vždy&nbsp;oběma&nbsp;směry. Cvičte&nbsp;po&nbsp;15&nbsp;vteřinách.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise7.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Asi na tři sekundy zavřete oči a&nbsp;pak je na tři sekundy otevřete. Cvičení opakujte alespoň&nbsp;5x.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise8.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Asi na dvě vteřiny stlačte svými prsty spánky a&nbsp;pak zase povolte. Cvičení opakujte alespoň&nbsp;5x.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise9.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Opisujte očima geometrické tvary. Začněte trojúhelníkem a&nbsp;potom přidávejte komplikovanější&nbsp;tvary.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                    <li class="section-exercise-eye-exercises__exercise" aria-live="polite">
+
+                                        <figure class="section-exercise-eye-exercises__exercise-animation-wrapper section-exercise-eye-exercises__switch-animation-1-target x-no-js" aria-hidden="true">
+                                            <div class="section-exercise-eye-exercises__exercise-animation preserve-aspect-ratio" data-lottie-file="js/LottieData/exercise10.json"></div>
+                                            <div class="section-exercise-eye-exercises__exercise-animation-loader" aria-hidden="true"></div>
+                                        </figure>
+
+                                        <p class="section-exercise-eye-exercises__exercise-text section-exercise-eye-exercises__switch-animation-2-target">
+                                            Prohlížejte si 10 vteřin objekt vzdálený asi 25 cm. Potom 10 vteřin objekt vzdálený několik metrů. Pak se zase vraťte zpět na objekt před vámi. Alespoň&nbsp;3x.
+                                        </p>
+
+                                    </li>
+                                    <!-- /.section-exercise-eye-exercises__exercise -->
+
+                                </ul>
+                                <!-- /.section-exercise-eye-exercises__exercises -->
+
+
+                                <!--––––––––– ** CONTROLLER ** –––––––––-->
+
+
+                                <nav class="section-exercise-eye-exercises__controller controller x-no-js">
+
+                                    <h2 class="visually-hidden">Navigace</h2>
+
+                                    <button class="controller__btn controller__btn--prev color-primary hf-color-current clear-button">
+                                        <span class="shadow full-size">
+                                            <span class="icon"><!-- css --></span>
+                                            <span class="visually-hidden">Předchozí</span>
+                                        </span>
+                                    </button>
+
+                                    <button class="controller__btn controller__btn--next color-primary hf-color-current clear-button">
+                                        <span class="shadow full-size">
+                                            <span class="icon"><!-- css --></span>
+                                            <span class="visually-hidden">Další</span>
+                                        </span>
+                                    </button>
+
+                                </nav>
+                                <!-- /.section-exercise-eye-exercises__controller controller section__hide2-target -->
+
+
+                                <!--––––––––– // CONTROLLER // –––––––––-->
+
+
+                            </div>
+                            <!-- /.section-exercise-eye-exercises__content-box -->
+
+                        </div><!-- /.center -->
+                    </div>
+                    <!-- /.section-exercise__content -->
+
+                </div>
+                <!-- /.section__hide-2-target -->
+
+            </article>
+            <!-- /.section-exercise section -->
+
+
+            <!--––––––––– // SECTION-EXERCISE-EYE-EXERCISES | SECTION-EXERCISE | SECTION // –––––––––-->
+
+
+        </article>
+        <!-- /.section section-exercises -->
+
+
+        <!--––––––––– // SECTION-EXERCISES | SECTION // –––––––––-->
+
+
+        <hr class="x-screen">
+
+
+        <!--––––––––– ** SECTION-OUTRO | SECTION-TEXT | SECTION ** –––––––––-->
+
+
+        <article class="section section-outro section-text" id="zaver">
+
+            <div class="section__content section__focus-target custom-focus full-size" tabindex="0">
+                <div class="center">
+
+                    <h2 class="visually-hidden x-print">Závěrečné informace</h2>
+
+                    <div class="section-text__wrapper">
+
+                        <div class="section-text__texts section__hide-target">
+
+                            <section class="section-text__text section-text__text--current" id="zaver__pristup" aria-live="polite">
+
+                                <h3 class="visually-hidden x-print">Přístup ke cvičení</h3>
+
+                                <p><span class="nowrap">Z těchto</span> cvičení učiňte <strong>hlavní cíl každého dne</strong> <span class="nowrap">a <strong>vždy</strong></span> <strong>je cvičte <span class="nowrap">s očekáváním</span> <span class="nowrap">a nadšením</span></strong>, jako byste <span class="nowrap">je dělali</span> poprvé.</p>
+                                <p>Během cvičení <strong>bude docházet <span class="nowrap">k výkyvům</span> ostrosti, ale horšími dny </strong><span class="nowrap">(nebo</span> <span class="nowrap">i jenom</span> <span class="nowrap">minutami)</span> <strong>se nesmíte nechat demotivovat</strong>! Tohle může být nejnáročnější část celého procesu, proto si na to dávejte pozor!</p>
+
+                            </section>
+                            <!-- /.section-text__text -->
+
+                            <section class="section-text__text" id="zaver__co-dal" aria-live="polite">
+
+                                <h3 class="visually-hidden x-print">Co dál?</h3>
+
+                                <p><strong>Až dojdete do cíle, je potřeba ještě nějakou dobu tato cvičení provádět</strong>, aby se váš zrak zafixoval. Některá cvičení však alespoň občas provádějte <span class="nowrap">i nadále</span>, protože věcí, které očím škodí, se budete dopouštět stále.</p>
+                                <p>Také celkově zlepšete svůj životní styl: jezte zdravě, hýbejte se, choďte do přírody, zbavte se stresu <span class="nowrap">a hlavně</span> <strong><span class="nowrap">v krátkých</span> intervalech přerušujte práci <span class="nowrap">a dívejte</span> se do dálky</strong> <span class="nowrap">(ale</span> ne pouze na jedno <span class="nowrap">místo)</span>.</p>
+
+                            </section>
+                            <!-- /.section-text__text -->
+
+                            <section class="section-text__text" id="zaver__dalsi-cviceni" aria-live="polite">
+
+                                <h3 class="visually-hidden x-print">Jiná cvičení</h3>
+
+                                <p>Na internetu lze najít i&nbsp;řadu jiných cvičení. Budou-li vám vyhovovat více, klidně jimi tato cvičení nahraďte <span class="nowrap">(kromě</span> <i>Korekčního</i> <span class="nowrap"><i>cvičení</i>)</span> nebo si je přidejte <span class="nowrap">do programu</span>.</p>
+
+                            </section>
+                            <!-- /.section-text__text -->
+
+                            <section class="section-text__text" id="zaver__zacnete-hned" aria-live="polite">
+
+                                <h3 class="highlight">Začněte třeba <span class="nowrap">hned teď!</span></h3>
+
+                                <a class="btn btn--download x-print" href="files/navod.pdf" download>
+                                    <span class="text">Stáhnout návod<span class="x-watch"> (PDF)</span></span>
+                                    <span class="underline"><!-- css --></span>
+                                </a>
+
+                                <button class="btn hf-color-highlight x-print x-no-js" type="button" onclick="print()">
+                                    <span class="text">Vytisknout</span>
+                                    <span class="underline"><!-- css --></span>
+                                </button>
+
+                            </section>
+                            <!-- /.section-text__text -->
+
+                            <section class="section-text__text" id="zaver__autor" aria-live="polite">
+
+                                <h3 class="highlight">Vytvořil:</h3>
+
+                                <a class="btn btn--next" href="http://mjerabek.cz" target="_blank">
+                                    <span class="text">Michal Jeřábek</span>
+                                    <span class="underline"><span><!-- css --></span></span>
+                                </a>
+
+                            </section>
+                            <!-- /.section-text__text -->
+
+                        </div>
+                        <!-- /.section-text__texts -->
+
+
+                        <!--––––––––– ** CONTROLLER ** –––––––––-->
+
+
+                        <nav class="section-text__controller controller section__hide-2-target">
+
+                            <h2 class="visually-hidden">Hlavní navigace</h2>
+
+                            <button class="controller__btn controller__btn--prev hf-color-highlight clear-button" data-controller-prev-section="cviceni">
+                                <span class="icon"><!-- css --></span>
+                                <span class="visually-hidden">Vrátit se</span>
+                            </button>
+
+                            <button class="controller__btn controller__btn--next hf-color-highlight clear-button" data-controller-disable-at="zaver__autor">
+                                <span class="icon"><!-- css --></span>
+                                <span class="visually-hidden">Pokračovat</span>
+                            </button>
+
+                        </nav>
+                        <!-- /.section-text__controller controller section__hide2-target -->
+
+
+                        <!--––––––––– // CONTROLLER // –––––––––-->
+
+
+                    </div>
+                    <!-- /.section-text__text -->
+
+                </div><!-- /.center -->
+            </div>
+            <!-- /.section__content -->
+
+        </article>
+        <!-- /.section section-outro section-text -->
+
+
+        <!--––––––––– // SECTION-OUTRO | SECTION-TEXT | SECTION // –––––––––-->
+
+
+    </main>
+    <!-- /#main-content -->
+
+
+    <!--––––––––– ** UI__FULLSCREEN ** –––––––––-->
+
+
+    <button class="ui__fullscreen color-primary hf-color-highlight transition clear-button x-no-js" type="button">
+        <span class="visually-hidden">Celá obrazovka</span>
+        <svg class="icon transition" viewBox="0 0 24 24" aria-hidden="false" focusable="false">
+            <path d="M24 9h-2v-7h-7v-2h9v9zm-9 15v-2h7v-7h2v9h-9zm-15-9h2v7h7v2h-9v-9zm9-15v2h-7v7h-2v-9h9z" />
+        </svg>
+    </button>
+
+
+    <!--––––––––– // UI__FULLSCREEN // –––––––––-->
+
+
+    <!--———————————— EXERCISE-TABLES (PRINT) ————————————-->
+
+    <div class="print__exercise-table print__exercise-table--myopia print-break-before x-screen" aria-hidden="true">
+        <p>Vidím vše</p>
+        <p>velmi ostře!</p>
+        <p>Vše se mi daří!</p>
+        <p>Dokážu vidět vše!</p>
+        <p>Mám stále lepší náladu!</p>
+        <p>Vidím všechna písmena a slova!</p>
+        <p>Velmi dobře vidím všechno, co vidím!</p>
+        <p>Pracuji na sobě a mám skvělou náladu!</p>
+        <p>Poznávám své schopnosti a vše se mi skvěle daří!</p>
+        <p>Velmi přesně a ostře vidím úplně všechny znaky!</p>
+        <p>Skvělé, vždyť já to vidím i bez brýlí. Vše se mi naprosto skvěle daří!</p>
+        <p>Tak tohle je ale opravdu super! Chválím se, vždyť já na to vůbec nepotřebuji brýle.</p>
+    </div>
+
+    <div class="print__exercise-table print__exercise-table--hyperopia print-break-before x-screen" aria-hidden="true">
+        <p>Tak tohle je ale opravdu super! Chválím se, vždyť já na to vůbec nepotřebuji brýle.</p>
+        <p>Skvělé, vždyť já to vidím i bez brýlí. Vše se mi naprosto skvěle daří!</p>
+        <p>Velmi přesně a ostře vidím úplně všechny znaky!</p>
+        <p>Poznávám své schopnosti a vše se mi skvěle daří!</p>
+        <p>Pracuji na sobě a mám skvělou náladu!</p>
+        <p>Velmi dobře vidím všechno, co vidím!</p>
+        <p>Vidím všechna písmena a slova!</p>
+        <p>Mám stále lepší náladu!</p>
+        <p>Dokážu vidět vše!</p>
+        <p>Vše se mi daří!</p>
+        <p>velmi ostře!</p>
+        <p>Vidím vše</p>
+    </div>
+
+
+    <!--———————————— JAVASCRIPT ————————————-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>!window.jQuery && document.write("<script src='libs/jq.min.js'><"+"/script>");</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script>!window.TweenMax && document.write("<script src='libs/gsap/TweenMax.min.js'><"+"/script>");</script>
+
+    <!--dev-->
+	<!--<script src="dev/PATHS.js"></script>-->
+	<!--<script src="dev/load-js.js" data-files="all.build.js"></script>-->
+	<!--/dev-->
+
+    <!--prod-->
+	<script src="build/all.build.min.js" defer></script>
+	<!--/prod-->
+
+</body>
+</html>

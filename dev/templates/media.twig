@@ -1,0 +1,9 @@
+{% for name, range in media %}=GX=
+{% if loop.index == 1 %}/* Skryje obsah podle velikosti viewportu. */{% endif %}
+@media{% if range[0] and range[1] %} (min-width: {{range[0]}}px) and (max-width: {{range[1]}}px) {% elseif range[0] %} (min-width: {{range[0]}}px) {% else %} (max-width: {{range[1]}}px) {% endif %}{
+
+    html .x-{{name}}.x-{{name}} {
+        display: none;
+    }
+}
+{% endfor %}=GX=

@@ -1,0 +1,258 @@
+/*====================================================================*/
+/*------------------------------- PRINT ------------------------------*/
+/*====================================================================*/
+
+/*--------------------------------------------------------------------*/
+/*------------------------------ GENERAL -----------------------------*/
+/*--------------------------------------------------------------------*/
+
+body {
+    quotes: "\201E" "\201C" "\201A" "\2018";
+
+    font-family: Releway, sans-serif;
+    line-height: 1.5;
+}
+
+/* Skryje element při tištění. */
+@media print {
+
+    html .x-print.x-print {
+        display: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+caption,
+.print-avoid-break-after {
+    page-break-after: avoid;
+    break-after: avoid-page;
+}
+
+p {
+    orphans: 3;
+    widows: 3;
+}
+
+blockquote > p:first-of-type:before {
+    content: open-quote;
+}
+
+blockquote > p:last-of-type:after {
+    content: close-quote;
+}
+
+img,
+table,
+figure,
+.print-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid-page;
+}
+
+.print-avoid-break-before {
+    page-break-before: avoid;
+    break-before: avoid-page;
+}
+
+.print-break-after {
+    page-break-after: always;
+    break-after: page;
+}
+
+.print-break-before {
+    page-break-before: always;
+    break-before: page;
+}
+
+.print-break-auto {
+    page-break-before: auto;
+    break-before: auto;
+    page-break-after: auto;
+    break-after: auto;
+    page-break-inside: auto;
+    break-inside: auto;
+}
+
+/* Odstraní odrážky a odsazení seznamů. */
+.print-clear-list {
+    padding-right: 0;
+    padding-left: 0;
+
+    list-style-type: none;
+}
+
+.print-max-100 {
+    max-width: 100%;
+}
+
+/* Zobrazí adresu odkazu v závorce:
+ *
+ * Máme-li: <a href="http://example.cz">zde</a>
+ * Vytiskne se: zde (http://example.cz)
+ * */
+a:not([href^="#"]):not([href^="tel:"]):not([href^="sms:"]):not([href^="mailto:"]):not(.x-print-href):not(.print-href-only):not(.print-title-href):not([data-print-after]):after {
+    content: " (" attr(href) ")";
+}
+
+/* Vytiskne se pouze href bez závorek. */
+a.print-href-only:not(.x-print-href):after {
+    content: attr(href);
+}
+
+/* Vytiskne se title: href. */
+a.print-title-href:not(.x-print-href):before {
+    content: attr(title)": " attr(href);
+}
+
+/* Vytiskne obsah v daném atributu. */
+[data-print-before]:before {
+    content: attr(data-print-before);
+}
+
+[data-print-after]:after {
+    content: attr(data-print-after);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/*--------------------------------------------------------------------*/
+/*------------------------------ SECTION -----------------------------*/
+/*--------------------------------------------------------------------*/
+
+.section:not(.x-print) {
+    display: block !important;
+}
+
+    .section * {
+        transform: none !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .section [style*="display: none;"] {
+        display: block !important;
+    }
+
+    .section__background {
+        display: none;
+    }
+
+/*--------------------------------------------------------------------*/
+/*----------------------------- EXERCISE -----------------------------*/
+/*--------------------------------------------------------------------*/
+
+.section-exercise__close {
+	display: none;
+}
+
+/*--------------------------------------------------------------------*/
+/*---------------------------- CONTROLLER ----------------------------*/
+/*--------------------------------------------------------------------*/
+
+.controller {
+	display: none;
+}
+
+/*--------------------------------------------------------------------*/
+/*-------------------------- EXERCISE-TABLE --------------------------*/
+/*--------------------------------------------------------------------*/
+
+.print__exercise-table {
+    padding-top: 100pt;
+
+    font-family: Georgia, serif;
+    font-size: calc(16px * 1.333333333);
+    text-align: center;
+}
+
+    .print__exercise-table p {
+        margin: 0;
+    }
+
+    .print__exercise-table--myopia p:nth-child(1),
+    .print__exercise-table--hyperopia p:nth-child(12) {
+        font-size: 4.5em;
+        line-height: calc(1.0 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(2),
+    .print__exercise-table--hyperopia p:nth-child(11) {
+        font-size: 3.6875em;
+        line-height: calc(1.05 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(3),
+    .print__exercise-table--hyperopia p:nth-child(10) {
+        font-size: 3em;
+        line-height: calc(1.08 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(4),
+    .print__exercise-table--hyperopia p:nth-child(9) {
+        font-size: 2.4375em;
+        line-height: calc(1.1 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(5),
+    .print__exercise-table--hyperopia p:nth-child(8) {
+        font-size: 2em;
+        line-height: calc(1.15 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(6),
+    .print__exercise-table--hyperopia p:nth-child(7) {
+        font-size: 1.56250em;
+        line-height: calc(1.2 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(7),
+    .print__exercise-table--hyperopia p:nth-child(6) {
+        font-size: 1.25em;
+        line-height: calc(1.25 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(8),
+    .print__exercise-table--hyperopia p:nth-child(5) {
+        font-size: 1.0625em;
+        line-height: calc(1.33 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(9),
+    .print__exercise-table--hyperopia p:nth-child(4) {
+        font-size: 0.8125em;
+        line-height: calc(1.5 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(10),
+    .print__exercise-table--hyperopia p:nth-child(3) {
+        font-size: 0.6875em;
+        line-height: calc(1.8 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(11),
+    .print__exercise-table--hyperopia p:nth-child(2) {
+        font-size: 0.5em;
+        line-height: calc(2.0 * 1.2);
+    }
+
+    .print__exercise-table--myopia p:nth-child(12),
+    .print__exercise-table--hyperopia p:nth-child(1) {
+        font-size: 0.375em;
+        line-height: calc(2.25 * 1.2);
+    }
+
+
+
+
+
+
+
+

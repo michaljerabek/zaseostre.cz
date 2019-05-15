@@ -1,0 +1,185 @@
+/*====================================================================*/
+/*---------------------------- CONTROLLER ----------------------------*/
+/*====================================================================*/
+
+.controller {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+    .controller__btn {
+        width: 70px;
+        height: 70px;
+
+        font-size: 0;
+    }
+
+    @media (max-width: 767px) {
+
+        .controller__btn {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @media (max-width: 479px) {
+
+        .controller__btn {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .controller__btn--prev {
+        transform: translate(75%);
+
+        opacity: 0;
+    }
+
+    .controller__btn--next {
+        transform: translate(-75%);
+
+        opacity: 0;
+    }
+
+    .controller__btn,
+    .controller__btn:hover,
+    .controller__btn:focus,
+    .controller__btn:active {
+        outline: none;
+
+        transition: none;
+    }
+
+    .controller--show-btns .controller__btn {
+        transition-property: opacity, transform;
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(.02, .38, .2, .99);
+    }
+
+    .controller--show-btns .controller__btn:disabled {
+        transition-duration: 0s;
+        transition-delay: 0.5s;
+    }
+
+    .controller--show-btns .controller__btn {
+        opacity: 1;
+    }
+
+    .controller--show-btns .controller__btn:not(:disabled) {
+        transform: translate(0%);
+    }
+
+    .controller__btn:disabled {
+        pointer-events: none;
+    }
+
+        .controller__btn .icon {
+            position: relative;
+
+            width: inherit;
+            height: inherit;
+
+            transition-property: opacity, transform, color;
+            transition-duration: 0.55s;
+            transition-timing-function: cubic-bezier(0, 0, 0.35, 1);
+        }
+
+        .controller__btn--prev .icon {
+            opacity: 0.25;
+        }
+
+        .controller__btn--next .icon {
+            opacity: 0.75;
+        }
+
+        .controller__btn:disabled .icon {
+            opacity: 0;
+        }
+
+        .controller__btn:not(:disabled):hover .icon,
+        .controller__btn:not(:disabled):focus .icon {
+            opacity: 1;
+
+            transition-duration: 0.225s;
+            transition-timing-function: cubic-bezier(0, 0, 0.35, 1);
+        }
+
+        .controller__btn--prev:hover .icon,
+        .controller__btn--prev:focus .icon {
+            transform: translateX(-12.5%);
+        }
+
+        .controller__btn--next:hover .icon,
+        .controller__btn--next:focus .icon {
+            transform: translateX(12.5%);
+        }
+
+        .controller__btn:focus-visible .icon {
+            outline: 2px solid #fff;
+        }
+
+        .controller__btn .icon::before,
+        .controller__btn .icon::after {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+
+            width: calc(100% * (50 / 70));
+            height: 4px;
+            margin-top: -2px;
+
+            background-color: currentColor;
+        }
+
+        .controller__btn--prev .icon::before,
+        .controller__btn--prev .icon::after {
+            left: 0;
+        }
+
+        .controller__btn--next .icon::before,
+        .controller__btn--next .icon::after {
+            right: 0;
+        }
+
+        .controller__btn--prev .icon::before {
+            transform: rotate(45deg);
+
+            transform-origin: left top;
+        }
+
+        .controller__btn--prev .icon::after {
+            transform: rotate(-45deg);
+
+            transform-origin: left bottom;
+        }
+
+        .controller__btn--next .icon::before {
+            transform: rotate(-45deg);
+
+            transform-origin: right top;
+        }
+
+        .controller__btn--next .icon::after {
+            transform: rotate(45deg);
+
+            transform-origin: right bottom;
+        }
+
+@media (min-width: 1260px) {}
+@media (min-width: 1520px) {}
+@media (min-width: 1260px) and (max-width: 1519px) {}
+@media (min-width: 768px) and (max-width: 1259px) {}
+@media (min-width: 1024px) and (max-width: 1259px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (max-width: 767px) {}
+@media (min-width: 640px) and (max-width: 767px) {}
+@media (min-width: 480px) and (max-width: 639px) {}
+@media (max-width: 479px) {}
+
+/* Barvy:
+ * primary: currentColor
+ */

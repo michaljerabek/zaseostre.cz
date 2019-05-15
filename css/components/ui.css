@@ -1,0 +1,166 @@
+/*====================================================================*/
+/*-------------------------------- UI --------------------------------*/
+/*====================================================================*/
+
+/* Styly zaměřovatelných elementů. */
+:focus {
+    outline: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+[tabindex="-1"]:focus {
+    outline: none;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus:not(:-moz-focus-ring) {
+    outline: none;
+}
+
+.custom-focus {
+    outline: none;
+}
+
+:focus-visible,
+.custom-focus:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 1);
+}
+
+/*////////////////////////////////////////////////////////*/
+
+::selection {
+    color: #000;
+    background-color: #B2DE40;
+}
+
+/*--------------------------------------------------------------------*/
+/*---------------------------- TRANSITION ----------------------------*/
+/*--------------------------------------------------------------------*/
+
+/* GENERATE: TRANSITION | transition.twig | settings.yml
+    ====
+    useHideable: false
+*/
+
+/* Univerzální transition.
+* Lze přidat jakémukoliv elementu.
+* Pokud bude element s třídou .transition uvnitř elementu,
+* který má :hover, :focus nebo :active, bude se chovat stejně,
+* jako kdyby i tento element měl :hover, :focus nebo :active. */
+a,
+button,
+.transition,
+a .transition ,
+button .transition {
+    transition: all 0.275s cubic-bezier(.5, .25, .5, 1) 0s;
+}
+
+a:hover,
+a:focus,
+button:hover,
+button:focus,
+.transition:hover,
+.transition:focus,
+a:hover .transition,
+a:focus .transition,
+button:hover .transition,
+button:focus .transition,
+.transition:hover .transition,
+.transition:focus .transition {
+    transition: all 0.125s ease-out 0s;
+}
+
+a:focus-within,
+button:focus-within,
+.transition:focus-within,
+a:focus-within .transition,
+button:focus-within .transition,
+.transition:focus-within .transition {
+    transition: all 0.125s ease-out 0s;
+}
+
+.transition:active,
+a:active,
+a:active .transition,
+button:active,
+button:active .transition,
+.transition:active .transition {
+    transition: all 0.05s ease-out 0s;
+}
+
+/* /GENERATE: TRANSITION */
+
+/*--------------------------------------------------------------------*/
+/*------------------------------ ICONS -------------------------------*/
+/*--------------------------------------------------------------------*/
+
+/* Přidá elementům ikonu (sprite). */
+.icon {
+    position: relative;
+
+    display: inline-block;
+}
+
+.icon:not(svg) {
+    /*background-image: url("../../img/sprite.png")*/;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------------------*/
+/*--------------------------- FULLSCREEN -----------------------------*/
+/*--------------------------------------------------------------------*/
+
+.ui__fullscreen {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 99999999;
+
+    width: 44px;
+    height: 44px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        visibility 0s linear 1s,
+        opacity 1s ease 0s;
+}
+
+.ui__fullscreen:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.fullscreen .section-intro.section--current ~ .ui__fullscreen--visible:not(.ui__fullscreen--active) {
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 1s ease 0s;
+}
+
+    .ui__fullscreen .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 24px;
+        height: 24px;
+        margin: auto;
+
+        fill: currentColor;
+        opacity: 0.75;
+
+        transition-property: opacity, color;
+    }
+
+    .ui__fullscreen:hover .icon,
+    .ui__fullscreen:focus .icon,
+    .ui__fullscreen:active .icon {
+        opacity: 1;
+    }
+
+
+
+

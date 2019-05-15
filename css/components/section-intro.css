@@ -1,0 +1,277 @@
+/*====================================================================*/
+/*-------------------------- SECTION-INTRO ---------------------------*/
+/*====================================================================*/
+
+.section-intro__background {
+    top: -7.5%;
+    left: -7.5%;
+
+    width: 115%;
+    height: 115%;
+}
+
+.section-intro__background::after {
+    content: "";
+
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(ellipse at center,
+        rgba(0, 0, 0, 0) 15%,
+        rgba(0, 0, 0, 0.15) 40%,
+        rgba(0, 0, 0, 0.72) 80%,
+        rgba(0, 0, 0, 1) 110%
+    );
+}
+
+    .section-intro__background-img {
+        object-fit: cover;
+        object-position: center center;
+
+        margin: 0;
+
+        transform: scale(1.4);
+        transform-origin: 50% 50%;
+
+        opacity: 0.001;
+    }
+
+    @media (max-width: 1519px) {
+
+        .section-intro__background-img {
+            transform: scale(1.45);
+        }
+    }
+
+    @media (max-width: 1023px) {
+
+        .section-intro__background-img {
+            transform: scale(1.5);
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .section-intro__background-img {
+            transform: scale(1.55);
+        }
+    }
+
+    .no-js .section-intro__background-img,
+    .section-intro__background-img--show {
+        transform: scale(1);
+
+        opacity: 1;
+
+        transition:
+            transform 11s cubic-bezier(.01, .49, 0, .82) 0s,
+            opacity 4s cubic-bezier(.07, .51, .15, .75) 0s;
+    }
+
+.section-intro__content > .center {
+    flex-direction: column;
+
+    max-width: 100%;
+
+    overflow: hidden;
+}
+
+.no-js .section-intro .center,
+.section-intro--drop-shadow .center {
+    filter: drop-shadow(0.35em 0.35em 0.7em rgba(0, 0, 0, 0.6));
+
+    transition: filter 2s linear 0s;
+}
+
+    .section-intro__claim {
+        margin: 0;
+
+        font-size: 4.6875rem;
+        font-weight: 300;
+
+        will-change: opacity, filter, transform;
+    }
+
+    @media (max-width: 1519px) {
+
+        .section-intro__claim {
+            font-size: calc(2rem + ((75 - 32) / 1519) * 100vw);
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .section-intro__claim {
+            font-size: calc(1rem + ((55 - 16) / 767) * 100vw);
+        }
+    }
+
+        .section-intro__claim .word,
+        .section-intro__claim .space,
+        .section-intro__claim .letter {
+            vertical-align: middle;
+        }
+
+    .section-intro__claim--1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding-right: 20px;
+        padding-left: 20px;
+
+        transform: scale(1.65);
+
+        line-height: 1.33333;
+
+        filter: blur(0.65em);
+        opacity: 0;
+    }
+
+    @supports (-ms-ime-align: auto) { /*MS Edge*/
+
+        .section-intro__claim--1 {
+            filter: blur(40px);
+        }
+    }
+
+    .section-intro__claim--1.section-intro__claim--unblur {
+        filter: blur(0em);
+
+        transition: filter 5s cubic-bezier(.2, .2, 0, 1) 0s;
+    }
+
+    @supports (-ms-ime-align: auto) { /*MS Edge*/
+
+        .section-intro__claim--1.section-intro__claim--unblur {
+            filter: blur(0px);
+        }
+    }
+
+        @media (max-width: 767px) {
+
+            .section-intro__claim--1 .word1 {
+                flex-basis: 100%;
+            }
+        }
+
+    .section-intro__claim--2 {
+        position: absolute;
+        z-index: 5;
+
+        transform: translateY(calc(23px + 1rem));
+
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        line-height: 1.333;
+
+        opacity: 0;
+
+        will-change: transform;
+    }
+
+    @media (max-width: 1519px) {
+
+        .section-intro__claim--2 {
+            font-size: calc(2rem + ((72 - 32) / 1519) * 100vw);
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .section-intro__claim--2 {
+            font-size: calc(1rem + ((55 - 16) / 767) * 100vw);
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .section-intro__claim--2 {
+            transform: translateY(calc(21px + 1rem));
+        }
+    }
+
+    @media (max-width: 639px) {
+
+        .section-intro__claim--2 {
+            transform: translateY(calc(13px + 1rem));
+        }
+    }
+
+    .section-intro__claim--2-show,
+    .no-js .section-intro__claim--2 {
+        position: relative;
+
+        opacity: 1;
+    }
+
+    .no-js .section-intro__claim--2,
+    .section-intro__claim--2-btn-shown {
+        transform: translateY(0px);
+
+        transition: transform 2.525s cubic-bezier(.035, .045, .075, .98) 0s;
+    }
+
+        .section-intro__claim--2 .word {
+            overflow: hidden;
+        }
+
+        .section-intro__claim--2 .word span {
+            display: inline-block;
+
+            line-height: 1;
+        }
+
+    .js .section-intro__btn--hidden {
+        display: none;
+    }
+
+    .section-intro__btn {
+        margin-top: 1rem;
+        margin-bottom: -0.75em;
+
+        overflow: visible;
+
+        will-change: transform, opacity;
+    }
+
+    .section-intro__btn:hover,
+    .section-intro__btn:focus {
+        color: inherit;
+    }
+
+        .js .section-intro__btn .underline {
+            transform: translateY(-1.25em);
+
+            opacity: 0;
+        }
+
+    .section-intro__background-overlay {
+        z-index: -1;
+
+        background: #000;
+    }
+
+    .section-intro__claim--2-btn-shown ~ .section-intro__background-overlay,
+    .no-js .section-intro__background-overlay {
+        display: none;
+    }
+
+@media (min-width: 1260px) {}
+@media (min-width: 1520px) {}
+@media (min-width: 1260px) and (max-width: 1519px) {}
+@media (min-width: 768px) and (max-width: 1259px) {}
+@media (min-width: 1024px) and (max-width: 1259px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (max-width: 767px) {}
+@media (min-width: 640px) and (max-width: 767px) {}
+@media (min-width: 480px) and (max-width: 639px) {}
+@media (max-width: 479px) {}
+
+/* Barvy:
+ * primary: currentColor
+ */

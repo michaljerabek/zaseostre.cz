@@ -1,0 +1,45 @@
+/*====================================================================*/
+/*--------------------- SECTION-EXERCISE-TABLE -----------------------*/
+/*====================================================================*/
+
+.section-exercise-table,
+.section-exercise-table .section-exercise__color {
+    color: rgb(0, 141, 255);
+}
+
+.section-exercise-table::selection,
+.section-exercise-table ::selection {
+    color: #e7e7e7;
+    background-color: rgb(0, 141, 255);
+}
+
+    @media (min-height: 580px) and (max-width: 767px) {
+
+        .section-exercise-table .section-exercise__background-img {
+            object-position: 62% center;
+        }
+    }
+
+    @media (max-height: 419px) and (min-width: 768px) {
+
+        .section-exercise-table .section-exercise__background-img {
+            object-position: center 30%;
+        }
+    }
+
+
+@media (min-width: 1260px) {}
+@media (min-width: 1520px) {}
+@media (min-width: 1260px) and (max-width: 1519px) {}
+@media (min-width: 768px) and (max-width: 1259px) {}
+@media (min-width: 1024px) and (max-width: 1259px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (max-width: 767px) {}
+@media (min-width: 640px) and (max-width: 767px) {}
+@media (min-width: 480px) and (max-width: 639px) {}
+@media (max-width: 479px) {}
+
+
+/* Barvy:
+ * primary: currentColor
+ */

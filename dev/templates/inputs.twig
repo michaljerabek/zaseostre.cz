@@ -1,0 +1,52 @@
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="step"],
+input[type^="date"],
+input[type="time"] {
+    background: none;
+    border: none;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition:{% if useHideable %}{% for prop in transition.props %}
+        {{prop}} {{transition.default.duration}} {{transition.default.easing}} {{transition.default.delay}},{% endfor %}
+        =GX={% for p, prop in _context["transition-hideable"].props %}
+        {{prop}} {{_context["transition-hideable"].default.duration}} {{_context["transition-hideable"].default.easing}} {{_context["transition-hideable"].default.delay}}{% if p == _context["transition-hideable"].props.length - 1 %};{% else %},{% endif %}{% endfor %}{% else %}
+        all {{transition.default.duration}} {{transition.default.easing}} {{transition.default.delay}};{% endif %}
+}
+
+select:hover,
+textarea:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="step"]:hover,
+input[type^="date"]:hover,
+input[type="time"]:hover,
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="step"]:focus,
+input[type^="date"]:focus,
+input[type="time"]:focus {
+    transition:{% if useHideable %}{% for prop in transition.props %}
+        {{prop}} {{transition.change.duration}} {{transition.change.easing}} {{transition.change.delay}},{% endfor %}
+        =GX={% for p, prop in _context["transition-hideable"].props %}
+        {{prop}} {{_context["transition-hideable"].default.duration}} {{_context["transition-hideable"].default.easing}} {{_context["transition-hideable"].default.delay}}{% if p == _context["transition-hideable"].props.length - 1 %};{% else %},{% endif %}{% endfor %}{% else %}
+        all {{transition.change.duration}} {{transition.change.easing}} {{transition.change.delay}};{% endif %}
+}

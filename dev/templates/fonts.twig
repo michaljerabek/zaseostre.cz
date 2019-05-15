@@ -1,0 +1,6 @@
+=GX={% for name, font in fonts %}
+{% if indexClass %}html .font{{loop.index}}.font{{loop.index}},{% else %}=GX={% endif %}
+html .font-{{name}}.font-{{name}} {
+    font-family: {{font}};
+}
+{% endfor %}=GX=

@@ -1,0 +1,57 @@
+fonts:
+    primary: '"Raleway", sans-serif'
+colors:
+    primary: '#e7e7e7'
+    highlight: '#B2DE40'
+    current: currentColor
+media:
+    desktop:   [1260, null]
+    desktop-l: [null, 1520]
+    desktop-s: [1260, 1519]
+    tablet:    [ 768, 1259]
+    tablet-l:  [1024, 1259]
+    tablet-s:  [ 768, 1023]
+    mobile:    [null,  767]
+    mobile-l:  [ 640,  767]
+    mobile-m:  [ 480,  639]
+    mobile-s:  [null,  479]
+    watch:     [null,  319]
+transition:
+    default:
+        duration: 0.275s
+        easing: cubic-bezier(.5, .25, .5, 1)
+        delay: 0s
+    change:
+        duration: 0.125s
+        easing: ease-out
+        delay: 0s
+    active:
+        duration: 0.05s
+        easing: ease-out
+        delay: 0s
+    props:
+        - color
+        - transform
+        - border-radius
+        - border-color
+        - filter
+        - -webkit-filter
+        - background
+transition-hideable:
+    default:
+        duration: 0.3s
+        easing: ease
+        delay: 0s
+    props:
+        - height
+        - min-height
+        - max-height
+        - width
+        - min-width
+        - max-width
+        - padding
+        - margin
+        - border-width
+        - line-height
+        - font-size
+        - opacity

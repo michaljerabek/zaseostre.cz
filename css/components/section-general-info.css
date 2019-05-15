@@ -1,0 +1,22 @@
+/*====================================================================*/
+/*----------------------- SECTION-GENERAL-INFO -----------------------*/
+/*====================================================================*/
+
+.section-general-info {
+
+}
+
+@media (min-width: 1260px) {}
+@media (min-width: 1520px) {}
+@media (min-width: 1260px) and (max-width: 1519px) {}
+@media (min-width: 768px) and (max-width: 1259px) {}
+@media (min-width: 1024px) and (max-width: 1259px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (max-width: 767px) {}
+@media (min-width: 640px) and (max-width: 767px) {}
+@media (min-width: 480px) and (max-width: 639px) {}
+@media (max-width: 479px) {}
+
+/* Barvy:
+ * primary: currentColor
+ */
