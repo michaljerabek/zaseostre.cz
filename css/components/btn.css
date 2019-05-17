@@ -140,6 +140,14 @@
         }
     }
 
+        .btn .text .text .space {
+            visibility: hidden;
+        }
+
+        .btn .text .text .letter {
+            will-change: opacity, transform;
+        }
+
     .btn .underline {
         position: absolute;
         bottom: 0.4em;
@@ -149,6 +157,8 @@
         height: 2px;
 
         background: currentColor;
+
+        will-change: opacity, transform;
     }
 
     @media (max-width: 639px) {

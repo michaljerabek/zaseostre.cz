@@ -170,6 +170,8 @@
             transform: scale(1.1666);
 
             opacity: 0;
+
+            will-change: opacity, transform;
         }
 
         .section-exercise-eye-exercises__exercise-animation-wrapper {
@@ -349,6 +351,8 @@
     padding-right: 50px;
     padding-bottom: 60px;
     padding-left: 50px;
+
+    will-change: transform, opacity;
 }
 
 @media (max-width: 767px) {

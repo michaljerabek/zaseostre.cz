@@ -14,6 +14,8 @@
         height: 70px;
 
         font-size: 0;
+
+        will-change: transform, opacity;
     }
 
     @media (max-width: 767px) {
@@ -85,6 +87,7 @@
             transition-property: opacity, transform, color;
             transition-duration: 0.55s;
             transition-timing-function: cubic-bezier(0, 0, 0.35, 1);
+            will-change: transform, opacity;
         }
 
         .controller__btn--prev .icon {
@@ -133,6 +136,8 @@
             margin-top: -2px;
 
             background-color: currentColor;
+
+            will-change: inherit;
         }
 
         .controller__btn--prev .icon::before,
