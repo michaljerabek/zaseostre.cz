@@ -19,7 +19,7 @@
 
                 title: ".section-exercise__title",
                 animContentWrapper: ".section-exercise__content-wrapper",
-                findAnimContent: "h4, h5, h6, p, li, .btn",
+                findAnimContent: "h4, h5, h6, p, li, .section-exercise__btn-anim-wrapper",
 
                 background: ".section-exercise__background",
                 backgroundImg: ".section-exercise__background-img",

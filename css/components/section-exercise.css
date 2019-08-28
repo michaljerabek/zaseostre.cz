@@ -608,7 +608,7 @@
     .js .section-exercise__content-wrapper h6,
     .js .section-exercise__content-wrapper p,
     .js .section-exercise__content-wrapper li,
-    .js .section-exercise__content-wrapper .btn {
+    .js .section-exercise__content-wrapper .section-exercise__btn-anim-wrapper {
         position: relative;
 
         transform: translateY(40px);
@@ -684,9 +684,13 @@
         }
     }
 
-        .section-exercise__content-wrapper .btn {
-            margin: 0.25em 0;
+        .section-exercise__btn-anim-wrapper {
+            display: inline-block;
         }
+
+            .section-exercise__content-wrapper .btn {
+                margin: 0.25em 0;
+            }
 
 
 @media (min-width: 1260px) {}
